@@ -7,26 +7,37 @@ import (
 
 // Based on https://cyber.harvard.edu/rss/rss.html
 
-// RSS represents RSS 2.0.
+// RSS represents the RSS 2.0.
 type RSS interface {
+	// Channel returns RSS channel.
 	Channel() Channel
 }
 
-// Channel represents RSS 2.0 channel.
+// Channel contains information about the channel and its contents.
 type Channel interface {
+	/* metadata */
 	// required
+	// Title returns a name of the channel. It's how people refer to your service.
+	// If you have an HTML website that contains the same information as your RSS file,
+	// the title of your channel should be the same as the title of your website.
 	Title() string
+	// Link returns a URL to the HTML website corresponding to the channel.
 	Link() string
+	// Description returns a phrase or sentence describing the channel.
 	Description() string
 
 	// optional
 	Image() string
 
 	Category() string
+	// Copyright returns copyright notice for content in the channel.
 	Copyright() string
 	Docs() string
 	Generator() string
-	Language() string // RFC 5646
+	// Language returns a language the channel is written in.
+	// This allows aggregators to group all Italian language sites,
+	// for example, on a single page. Should be conform to RFC 5646.
+	Language() string
 
 	Rating() fmt.Stringer
 	TextInput() string
@@ -39,9 +50,13 @@ type Channel interface {
 	SkipHours() int
 	SkipDays() int
 
+	// ManagingEditor returns an email address for person responsible for editorial content.
 	ManagingEditor() fmt.Stringer
+	// WebMaster returns an email address for person responsible for technical issues
+	// relating to channel.
 	WebMaster() fmt.Stringer
 
+	/* content */
 	Items() []Item
 }
 
