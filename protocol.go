@@ -41,6 +41,18 @@ type Storage interface {
 	LoadDependencies(Aggregator) error
 }
 
+// Marshaler defines behavior for a source-to-schema converter.
+type Marshaler interface {
+	// Marshal converts a source into a schema-specific object.
+	Marshal(Source) (interface{}, error)
+}
+
+// Unmarshaler defines behavior for a schema-to-source converter.
+type Unmarshaler interface {
+	// Unmarshal converts a schema-specific object into a source.
+	Unmarshal(interface{}) (Source, error)
+}
+
 // View describes a view layer behavior.
 type View interface {
 	// Render renders a provided source into a provided output.
