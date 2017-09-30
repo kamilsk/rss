@@ -6,9 +6,9 @@ import "io"
 type Aggregator interface {
 	Source
 	// Add puts a source into an internal source collection.
-	Add(src Source)
+	Add(Source)
 	// Remove removes a source from an internal source collection.
-	Remove(src Source)
+	Remove(Source)
 	// Get returns a source with a specified identifier or nil if nothing found.
 	Get(id string) Source
 	// All returns all sources from an internal source collection.
@@ -23,6 +23,12 @@ type Source interface {
 	Atom() Atom
 	// RSS returns the RSS 2.0 representation of a source.
 	RSS() RSS
+}
+
+// Middleware defines the method for source transformation (filtering, enriching, etc.).
+type Middleware interface {
+	// Transform applies some logic to provided source and returns modified.
+	Transform(Source) Source
 }
 
 // Storage describes a data access layer behavior.
