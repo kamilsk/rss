@@ -1,0 +1,46 @@
+feeds:
+- id: podcasts
+  name: My collection of audio podcasts
+  src:
+  - { id: itunes-420907455,  src: https://mds.podfm.ru/rss/ }
+  - { id: itunes-903660317,  src: http://devzen.ru/feed/ }
+  - { id: itunes-1080500016, src: https://feeds.soundcloud.com/users/soundcloud:users:202737209/sounds.rss }
+  - { id: itunes-1162673070, src: https://feeds.soundcloud.com/users/soundcloud:users:259154388/sounds.rss }
+  - { id: itunes-312059190,  src: https://teacherluke.co.uk/feed/ }
+  - { id: itunes-256504435,  src: http://feeds.rucast.net/radio-t }
+  - { id: itunes-1196627670, src: http://spiridonov.ru/runetologia/rss_new/ }
+  - { id: itunes-1120964487, src: https://changelog.com/gotime/feed }
+  - { id: itunes-1031101295, src: https://golangshow.com/index.xml }
+  - { id: itunes-341623264,  src: https://changelog.com/podcast/feed }
+  - { id: itunes-1091341048, src: https://softskills.audio/feed.xml }
+  - { id: itunes-594292319,  src: https://feeds.feedburner.com/razbor-podcast }
+  - { id: itunes-1226773343, src: https://feeds.soundcloud.com/users/soundcloud:users:299701886/sounds.rss }
+  - { id: itunes-1233996390, src: https://feeds.soundcloud.com/users/soundcloud:users:306455261/sounds.rss }
+  - { id: itunes-1215522954, src: https://fronterki.fireside.fm/rss }
+  - { id: itunes-890468606,  src: https://sdcast.ksdaemon.ru/feed/ }
+  - { id: itunes-670175970,  src: https://feeds.feedburner.com/devopsdeflope }
+  - { id: itunes-1046278525, src: https://theartofprogramming.podbean.com/feed/ }
+  - { id: itunes-1021236121, src: http://radio-qa.com/feed/ }
+  - { id: itunes-904938655,  src: https://radiojs.ru/feed/ }
+  - { id: itunes-945496997,  src: http://ctocast.com/feed/ }
+  - { id: itunes-1178897992, src: https://feeds.soundcloud.com/users/soundcloud:users:301264956/sounds.rss }
+  - { id: itunes-996423650,  src: https://feeds.soundcloud.com/users/soundcloud:users:153519653/sounds.rss }
+  - { id: itunes-923355344,  src: https://uwebdesign.ru/feed/ }
+  - { id: itunes-1254263226, src: https://feeds.soundcloud.com/users/soundcloud:users:314933361/sounds.rss }
+  - { id: itunes-1247192730, src: https://feeds.soundcloud.com/users/soundcloud:users:306631331/sounds.rss }
+  - { id: itunes-560881209,  src: https://kdicast.com/feed/ }
+
+- id: releases
+  name: Releases, for which I am following
+  src:
+  - { id: ansible,      src: https://github.com/ansible/ansible/releases.atom }
+  - { id: glide,        src: https://github.com/Masterminds/glide/releases.atom }
+  - { id: dep,          src: https://github.com/golang/dep/releases.atom }
+  - { id: gogs,         src: https://github.com/gogits/gogs/releases.atom }
+  - { id: hugo,         src: https://github.com/gohugoio/hugo/releases.atom }
+  - { id: ponzu,        src: https://github.com/ponzu-cms/ponzu/releases.atom }
+  - { id: gometalinter, src: https://github.com/alecthomas/gometalinter/releases.atom }
+  - { id: goreleaser,   src: https://github.com/goreleaser/goreleaser/releases.atom }
+  - { id: protobuf,     src: https://github.com/google/protobuf/releases.atom }
+  - { id: awx,          src: https://github.com/ansible/awx/releases.atom }
+  - { id: moby,         src: https://github.com/moby/moby/releases.atom }
