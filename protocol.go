@@ -10,7 +10,7 @@ type Aggregator interface {
 	// Remove removes a source from an internal source collection.
 	Remove(Source)
 	// Get returns a source with a specified identifier or nil if nothing found.
-	Get(id string) Source
+	Get(ID string) Source
 	// All returns all sources from an internal source collection.
 	All() []Source
 }
@@ -29,6 +29,12 @@ type Source interface {
 type Middleware interface {
 	// Transform applies some logic to provided source and returns modified.
 	Transform(Source) Source
+}
+
+// Client describes a network access layer behavior.
+type Client interface {
+	// Get sends HTTP request and returns valid source or error.
+	Get(URL string) (Source, error)
 }
 
 // Storage describes a data access layer behavior.
