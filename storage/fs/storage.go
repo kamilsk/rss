@@ -2,30 +2,30 @@ package fs
 
 import "github.com/kamilsk/stream"
 
-// FileStorage is an implementation of stream.Storage interface.
-type FileStorage struct {
+// Storage is an implementation of stream.Storage interface.
+type Storage struct {
 }
 
-func (FileStorage) Store(stream.Source) error {
+func (Storage) Store(stream.Source) error {
 	panic("implement me")
 }
 
-func (FileStorage) StoreDependencies(stream.Aggregator) error {
+func (Storage) StoreDependencies(stream.Aggregator) error {
 	panic("implement me")
 }
 
-func (FileStorage) Remove(stream.Source) error {
+func (Storage) Remove(stream.Source) error {
 	panic("implement me")
 }
 
-func (FileStorage) LoadAll() ([]stream.Source, error) {
+func (Storage) LoadAll() ([]stream.Source, error) {
 	panic("implement me")
 }
 
-func (FileStorage) LoadByID(string) (stream.Source, error) {
+func (Storage) LoadByID(string) (stream.Source, error) {
 	panic("implement me")
 }
 
-func (FileStorage) LoadDependencies(stream.Aggregator) error {
+func (Storage) LoadDependencies(stream.Aggregator) error {
 	panic("implement me")
 }

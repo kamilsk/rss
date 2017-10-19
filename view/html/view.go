@@ -6,10 +6,10 @@ import (
 	"github.com/kamilsk/stream"
 )
 
-// HTMLView is an implementation of stream.View interface.
-type HTMLView struct {
+// View is an implementation of stream.View interface.
+type View struct {
 }
 
-func (HTMLView) Render(io.Writer, stream.Source) error {
+func (View) Render(io.Writer, stream.Source) error {
 	panic("implement me")
 }
