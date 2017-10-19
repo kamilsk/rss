@@ -1,0 +1,9 @@
+{
+  "id": "multi_resource",
+  "name": "multi resource",
+  "src": [
+    {"src": "https://rss.octolab.net/kamilsk/podcasts"},
+    {"src": "https://rss.octolab.net/kamilsk/releases"},
+    {"src": "https://rss.octolab.net/octolab/releases"}
+  ]
+}

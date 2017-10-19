@@ -1,3 +1,5 @@
+# convert: https://codebeautify.org/yaml-to-json-xml-csv
+# minify:  https://www.browserling.com/tools/json-minify
 - id: root
   name: All my feeds
   src:

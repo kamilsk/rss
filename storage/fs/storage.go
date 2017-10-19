@@ -3,6 +3,7 @@ package fs
 import "github.com/kamilsk/stream"
 
 // Storage is an implementation of stream.Storage interface.
+// Uses JSON as a supported format to store a source.
 type Storage struct {
 }
 
