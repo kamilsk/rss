@@ -1,29 +1,33 @@
 package fs
 
-import (
-	"encoding/json"
-	"errors"
-)
+import "encoding/json"
 
 // Entry holds information about the source on data access layer.
 type Entry struct {
-	ID   string `json:"id"`
-	Name string `json:"name"`
+	URL  string           `json:"-"`
+	URN  string           `json:"id"`
+	Name string           `json:"name"`
+	Raw  *json.RawMessage `json:"src"`
 
-	Raw *json.RawMessage `json:"src"`
-	sub []Entry
-	url string
+	children []*Entry
+}
+
+func (e *Entry) AddChild(child *Entry) {
+	e.children = append(e.children, child)
+}
+
+func (e Entry) Children() []*Entry {
+	return e.children
+}
+
+func (e Entry) URI() string {
+	if e.URL == "" {
+		return e.URN
+	}
+	return e.URL
 }
 
 type entry Entry // to prevent recursion
-
-func (e *Entry) URL() string {
-	return e.url
-}
-
-func (e *Entry) SubEntries() []Entry {
-	return e.sub
-}
 
 // MarshalJSON implements json.Marshaler interface.
 func (e *Entry) MarshalJSON() ([]byte, error) {
@@ -32,33 +36,34 @@ func (e *Entry) MarshalJSON() ([]byte, error) {
 		raw []byte
 		err error
 	)
-	if len(v.sub) == 0 {
-		raw, err = json.Marshal(v.url)
+	if v.URL != "" {
+		raw, err = json.Marshal(v.URL)
 	} else {
-		raw, err = json.Marshal(v.sub)
+		raw, err = json.Marshal(v.children)
 	}
 	if err != nil {
 		return nil, err
 	}
-	if v.Raw == nil {
-		v.Raw = &json.RawMessage{}
-	}
+	v.Raw = &json.RawMessage{}
 	*v.Raw = json.RawMessage(raw)
 	return json.Marshal(v)
 }
 
 // UnmarshalJSON implements json.Unmarshaler interface.
 func (e *Entry) UnmarshalJSON(data []byte) error {
-	var v entry
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	if v.Raw == nil {
-		return errors.New(`json: "src" node is nil`)
-	}
-	err := json.Unmarshal(*v.Raw, &v.sub)
-	if err != nil {
-		err = json.Unmarshal(*v.Raw, &v.url)
+	var (
+		err error
+		v   entry
+	)
+	err = json.Unmarshal(data, &v)
+	if v.Raw != nil && len(*v.Raw) > 0 {
+		raw := *v.Raw
+		// 34 - "
+		if raw[0] == 34 {
+			err = json.Unmarshal(raw, &v.URL)
+		} else {
+			err = json.Unmarshal(raw, &v.children)
+		}
 	}
 	if err != nil {
 		return err

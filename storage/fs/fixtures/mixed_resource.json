@@ -3,11 +3,13 @@
   "name": "mixed resource",
   "src": [
     {
+      "id": "multi_resource",
+      "name": "multi resource",
       "src": [
-        {"src": "https://rss.octolab.net/kamilsk/podcasts"},
-        {"src": "https://rss.octolab.net/kamilsk/releases"}
+        {"id": "end_resource", "name": "end resource", "src": "https://rss.octolab.net/kamilsk/podcasts"},
+        {"id": "end_resource", "name": "end resource", "src": "https://rss.octolab.net/kamilsk/releases"}
       ]
     },
-    {"src": "https://rss.octolab.net/octolab/releases"}
+    {"id": "end_resource", "name": "end resource", "src": "https://rss.octolab.net/octolab/releases"}
   ]
 }
