@@ -40,6 +40,9 @@ func (e *Entry) MarshalJSON() ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
+	if v.Raw == nil {
+		v.Raw = &json.RawMessage{}
+	}
 	*v.Raw = json.RawMessage(raw)
 	return json.Marshal(v)
 }
