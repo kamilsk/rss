@@ -2,6 +2,7 @@ package fs_test
 
 import (
 	"encoding/json"
+	"errors"
 	"flag"
 	"io"
 	"io/ioutil"
@@ -14,6 +15,38 @@ import (
 
 var Update = flag.Bool("update", false, "update .golden files")
 
+func TestEntry_WorkWithChildren_NegativeCases(t *testing.T) {
+	root := &fs.Entry{
+		URN:  "root",
+		Name: "My feeds",
+	}
+	child := &fs.Entry{URL: "https://rss.octolab.net/kamilsk/podcasts"}
+	if !root.AddChild(child) {
+		t.Error("cannot add child")
+	}
+	if root.AddChild(nil) {
+		t.Error("<nil> child has been added")
+	}
+	if root.AddChild(&fs.Entry{}) {
+		t.Error("child with empty URI has been added")
+	}
+	if root.AddChild(&fs.Entry{URL: "https://rss.octolab.net/kamilsk/podcasts"}) {
+		t.Error("duplicate child has been added")
+	}
+	if root.RemoveChild(nil) {
+		t.Error("<nil> child has been removed")
+	}
+	if root.RemoveChildByURI("") {
+		t.Error("child with empty URI has been removed")
+	}
+	if root.RemoveChildByURI("unknown") {
+		t.Error("child with not presented URI has been removed")
+	}
+	if root.RemoveChild(&fs.Entry{URL: "https://rss.octolab.net/kamilsk/podcasts"}) {
+		t.Error("new child has been removed")
+	}
+}
+
 func TestEntry_MarshalJSON(t *testing.T) {
 	for _, tc := range []struct {
 		entry    *fs.Entry
@@ -23,7 +56,7 @@ func TestEntry_MarshalJSON(t *testing.T) {
 		}
 	}{
 		{
-			entry: &fs.Entry{URL: "https://rss.octolab.net/kamilsk/podcasts", URN: "end_resource", Name: "end resource"},
+			entry: &fs.Entry{URL: "https://rss.octolab.net/kamilsk/podcasts", Name: "end resource"},
 			expected: struct {
 				err    error
 				golden string
@@ -35,12 +68,12 @@ func TestEntry_MarshalJSON(t *testing.T) {
 					URN:  "multi_resource",
 					Name: "multi resource",
 				}
-				root.AddChild(&fs.Entry{URL: "https://rss.octolab.net/kamilsk/podcasts", URN: "end_resource",
-					Name: "end resource"})
-				root.AddChild(&fs.Entry{URL: "https://rss.octolab.net/kamilsk/releases", URN: "end_resource",
-					Name: "end resource"})
-				root.AddChild(&fs.Entry{URL: "https://rss.octolab.net/octolab/releases", URN: "end_resource",
-					Name: "end resource"})
+				other := &fs.Entry{URL: "https://rss.octolab.net/kamilsk/new"}
+				root.AddChild(other)
+				root.AddChild(&fs.Entry{URL: "https://rss.octolab.net/kamilsk/podcasts", Name: "end resource"})
+				root.AddChild(&fs.Entry{URL: "https://rss.octolab.net/kamilsk/releases", Name: "end resource"})
+				root.AddChild(&fs.Entry{URL: "https://rss.octolab.net/octolab/releases", Name: "end resource"})
+				root.RemoveChildByURI(other.URI())
 				return root
 			}(),
 			expected: struct {
@@ -147,6 +180,13 @@ func TestEntry_UnmarshalJSON(t *testing.T) {
 				},
 			},
 		},
+		{
+			file: "./fixtures/invalid_resource.json",
+			expected: struct {
+				err     error
+				visitor func(fs.Entry) bool
+			}{err: errors.New("json: cannot unmarshal number into Go value of type []*fs.Entry")},
+		},
 	} {
 		var obtained fs.Entry
 		err := json.NewDecoder(func(file string) io.Reader {
@@ -166,7 +206,7 @@ func TestEntry_UnmarshalJSON(t *testing.T) {
 		case tc.expected.err != nil && err == nil:
 			t.Errorf("unexpected error. expected: %v, obtained: %v", tc.expected.err, err)
 		}
-		if !tc.expected.visitor(obtained) {
+		if tc.expected.visitor != nil && !tc.expected.visitor(obtained) {
 			t.Errorf("visitor failed at %s %q", obtained.URI(), obtained.Name)
 		}
 	}
