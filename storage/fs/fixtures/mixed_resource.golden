@@ -1,0 +1,1 @@
+{"id":"mixed_resource","name":"mixed resource","src":[{"id":"multi_resource","name":"multi resource","src":[{"name":"end resource","src":"https://rss.octolab.net/kamilsk/podcasts"},{"name":"end resource","src":"https://rss.octolab.net/kamilsk/releases"}]},{"name":"end resource","src":"https://rss.octolab.net/octolab/releases"}]}
