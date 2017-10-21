@@ -16,6 +16,18 @@ type Entity struct {
 	children []*Entity
 }
 
+// Feeds returns all feed URLs including feeds of internal entities.
+func (e *Entity) Feeds() []string {
+	feeds := make([]string, 0, 1+len(e.children))
+	if e.URL != "" {
+		feeds = append(feeds, e.URL)
+	}
+	for _, child := range e.children {
+		feeds = append(feeds, child.Feeds()...)
+	}
+	return feeds
+}
+
 // URI returns Uniform Resource Identifier of the entity.
 // It takes into account its nesting level.
 func (e *Entity) URI() string {

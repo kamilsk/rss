@@ -7,6 +7,7 @@ import (
 	"io"
 	"io/ioutil"
 	"os"
+	"reflect"
 	"strings"
 	"testing"
 
@@ -179,7 +180,8 @@ func TestEntity_UnmarshalJSON(t *testing.T) {
 				visitor func(fs.Entity) bool
 			}{
 				visitor: func(e fs.Entity) bool {
-					return e.IsValid() && e.URI() == "https://rss.octolab.net/kamilsk/podcasts"
+					return e.IsValid() && e.URI() == "https://rss.octolab.net/kamilsk/podcasts" &&
+						reflect.DeepEqual(e.Feeds(), []string{"https://rss.octolab.net/kamilsk/podcasts"})
 				},
 			},
 		},
@@ -201,7 +203,11 @@ func TestEntity_UnmarshalJSON(t *testing.T) {
 							}
 						}
 						return true
-					}()
+					}() && reflect.DeepEqual(e.Feeds(), []string{
+						"https://rss.octolab.net/kamilsk/podcasts",
+						"https://rss.octolab.net/kamilsk/releases",
+						"https://rss.octolab.net/octolab/releases",
+					})
 				},
 			},
 		},
@@ -224,7 +230,11 @@ func TestEntity_UnmarshalJSON(t *testing.T) {
 							}
 						}
 						return true
-					}()
+					}() && reflect.DeepEqual(e.Feeds(), []string{
+						"https://rss.octolab.net/kamilsk/podcasts",
+						"https://rss.octolab.net/kamilsk/releases",
+						"https://rss.octolab.net/octolab/releases",
+					})
 				},
 			},
 		},
