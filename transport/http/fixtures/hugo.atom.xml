@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/gohugoio/hugo/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/gohugoio/hugo/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/gohugoio/hugo/releases.atom"/>
+  <title>Release notes from hugo</title>
+  <updated>2017-10-19T14:34:09+03:00</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/11180687/v0.30.2</id>
+    <updated>2017-10-19T15:29:40+03:00</updated>
+    <link rel="alternate" type="text/html" href="/gohugoio/hugo/releases/tag/v0.30.2"/>
+    <title>v0.30.2</title>
+    <content type="html">&lt;p&gt;This release fixes Fast Render mode with sub-path in baseURL &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/3164103310fbca1211cfa9ce4a5eb7437854b6ad&quot;&gt;31641033&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3981&quot;&gt;#3981&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Automated with &lt;a href=&quot;https://github.com/goreleaser&quot;&gt;GoReleaser&lt;/a&gt;&lt;br&gt;
+Built with go version go1.9.1 linux/amd64&lt;/p&gt;</content>
+    <author>
+      <name>bep</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/394382?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/11180687/v0.30.1</id>
+    <updated>2017-10-19T08:46:06+03:00</updated>
+    <link rel="alternate" type="text/html" href="/gohugoio/hugo/releases/tag/v0.30.1"/>
+    <title>v0.30.1</title>
+    <content type="html">&lt;p&gt;This is a bug-fix release with two important fixes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix hugo -w &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/fa53b13ca0ffb1db6ed20f5353661d3f8a5fd455&quot;&gt;fa53b13c&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3980&quot;&gt;#3980&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Revert sitemap template change to make the Google validator happy &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/5109ed520f2ddde815d50e7b31acbbfc57ce7719&quot;&gt;5109ed520&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3978&quot;&gt;#3978&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hugo now has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;20285+ &lt;a href=&quot;https://github.com/gohugoio/hugo/stargazers&quot;&gt;stars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;454+ &lt;a href=&quot;https://github.com/gohugoio/hugo/graphs/contributors&quot;&gt;contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;180+ &lt;a href=&quot;http://themes.gohugo.io/&quot;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Automated with &lt;a href=&quot;https://github.com/goreleaser&quot;&gt;GoReleaser&lt;/a&gt;&lt;br&gt;
+Built with go version go1.9.1 linux/amd64&lt;/p&gt;</content>
+    <author>
+      <name>bep</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/394382?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/11180687/v0.30</id>
+    <updated>2017-10-16T14:01:13+03:00</updated>
+    <link rel="alternate" type="text/html" href="/gohugoio/hugo/releases/tag/v0.30"/>
+    <title>v0.30</title>
+    <content type="html">&lt;p&gt;Hugo &lt;code&gt;0.30&lt;/code&gt; is the &lt;strong&gt;Race Car Edition&lt;/strong&gt;. Hugo is already very very fast, but much wants more. So we added &lt;strong&gt;Fast Render Mode&lt;/strong&gt;. It is hard to explain, so start the Hugo development server with &lt;code&gt;hugo server&lt;/code&gt; and start editing. Live reloads just got so much faster! The &quot;how and what&quot; is discussed at length in &lt;a href=&quot;https://github.com/gohugoio/hugo/pull/3959&quot;&gt;other places&lt;/a&gt;, but the short version is that we now re-render only the parts of the site that you are working on.&lt;/p&gt;
+&lt;p&gt;The second performance-related feature is a follow-up to the Template Metrics added in Hugo &lt;code&gt;0.29&lt;/code&gt;. Now, if you add the flag &lt;code&gt;--templateMetricsHints&lt;/code&gt;, we will calculate a score for how your partials can be cached (with the &lt;code&gt;partialCached&lt;/code&gt; template func).&lt;/p&gt;
+&lt;p&gt;This release also more or less makes the really fast Chroma highlighter a complete alternative to Pygments. Most noteable is the new table &lt;code&gt;linenos&lt;/code&gt; support (&lt;a href=&quot;https://github.com/gohugoio/hugo/commit/7c30e2cbb08fdf0e61f80c7f1aa29909aeca4211&quot;&gt;7c30e2cb&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3915&quot;&gt;#3915&lt;/a&gt;), which makes copy-and-paste code blocks much easier.&lt;/p&gt;
+&lt;p&gt;This release represents &lt;strong&gt;31 contributions by 10 contributors&lt;/strong&gt; to the main Hugo code base.&lt;br&gt;
+&lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contribution, but also a big shoutout to &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt;, &lt;a href=&quot;https://github.com/digitalcraftsman&quot;&gt;@digitalcraftsman&lt;/a&gt;, and &lt;a href=&quot;https://github.com/bmon&quot;&gt;@bmon&lt;/a&gt; for their ongoing contributions.&lt;br&gt;
+And as always a big thanks to &lt;a href=&quot;https://github.com/digitalcraftsman&quot;&gt;@digitalcraftsman&lt;/a&gt; for his relentless work on keeping the documentation and the themes site in pristine condition.&lt;/p&gt;
+&lt;p&gt;Many have also been busy writing and fixing the documentation in &lt;a href=&quot;https://github.com/gohugoio/hugoDocs&quot;&gt;hugoDocs&lt;/a&gt;,&lt;br&gt;
+which has received &lt;strong&gt;26 contributions by 15 contributors&lt;/strong&gt;. A special thanks to &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;, &lt;a href=&quot;https://github.com/digitalcraftsman&quot;&gt;@digitalcraftsman&lt;/a&gt;, &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt;, and &lt;a href=&quot;https://github.com/kaushalmodi&quot;&gt;@kaushalmodi&lt;/a&gt; for their work on the documentation site.&lt;/p&gt;
+&lt;p&gt;Hugo now has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;20195+ &lt;a href=&quot;https://github.com/gohugoio/hugo/stargazers&quot;&gt;stars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;454+ &lt;a href=&quot;https://github.com/gohugoio/hugo/graphs/contributors&quot;&gt;contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;180+ &lt;a href=&quot;http://themes.gohugo.io/&quot;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Running &lt;code&gt;hugo server&lt;/code&gt; will now run with the new &quot;Fast Render Mode&quot; default on. To turn it off, run &lt;code&gt;hugo server --disableFastRender&lt;/code&gt; or set &lt;code&gt;disableFastRender=true&lt;/code&gt; in your site config.&lt;/li&gt;
+&lt;li&gt;There have been several fixes and enhancements in the Chroma highlighter. One is that it now creates Pygments compatible CSS classes, which means that you may want to re-generate the stylesheet. See the &lt;a href=&quot;https://gohugo.io/content-management/syntax-highlighting/&quot;&gt;Syntax Highlighting Doc&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Enhancements&lt;/h2&gt;
+&lt;h3&gt;Performance&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Only re-render the view(s) you&#39;re working on &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/60bd332c1f68e49e6ac439047e7c660865189380&quot;&gt;60bd332c&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3962&quot;&gt;#3962&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Detect &lt;code&gt;partialCached&lt;/code&gt; candidates &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/5800a20a258378440e203a6c4a4343f5077755df&quot;&gt;5800a20a&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Move metrics output to the end of the site build &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/b277cb33e4dfa7440fca3b7888026944ce056154&quot;&gt;b277cb33&lt;/a&gt; &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Templates&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Output &lt;code&gt;xmlns:xhtml&lt;/code&gt; only if there are translations available &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/0859d9dfe647db3b8a192da38ad7efb5480a29a1&quot;&gt;0859d9df&lt;/a&gt; &lt;a href=&quot;https://github.com/jamieconnolly&quot;&gt;@jamieconnolly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;errorf&lt;/code&gt; template function &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/4fc67fe44a3c65fc7faaed21d5fa5bb5f87edf2c&quot;&gt;4fc67fe4&lt;/a&gt; &lt;a href=&quot;https://github.com/bmon&quot;&gt;@bmon&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3817&quot;&gt;#3817&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;os.FileExists&lt;/code&gt; template function &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/2818878994e906c292cbe00cb2a83f1531a21f32&quot;&gt;28188789&lt;/a&gt; &lt;a href=&quot;https://github.com/digitalcraftsman&quot;&gt;@digitalcraftsman&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3839&quot;&gt;#3839&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;float&lt;/code&gt; template function &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/57adc539fc98dcb6fba8070b9611b8bd545f6f7f&quot;&gt;57adc539&lt;/a&gt; &lt;a href=&quot;https://github.com/x3ro&quot;&gt;@x3ro&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3307&quot;&gt;#3307&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rework the partial test and benchmarks &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/e2e8bcbec34702a27047b91b6b007a15f1fc0797&quot;&gt;e2e8bcbe&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Change &lt;code&gt;SummaryLength&lt;/code&gt; to be configurable (&lt;a href=&quot;https://github.com/gohugoio/hugo/pull/3924&quot; class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load issue title&quot; data-id=&quot;261530608&quot; data-permission-text=&quot;Issue title is private&quot; data-url=&quot;https://github.com/gohugoio/hugo/issues/3924&quot;&gt;#3924&lt;/a&gt;) &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/8717a60cc030f4310c1779c0cdd51db37ad636cd&quot;&gt;8717a60c&lt;/a&gt; &lt;a href=&quot;https://github.com/bmon&quot;&gt;@bmon&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3734&quot;&gt;#3734&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Replace &lt;code&gt;make&lt;/code&gt; with &lt;code&gt;mage&lt;/code&gt; in CircleCI build &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/fe71cb6f5f83cdc8374cf1fc35a6d48102bd4b12&quot;&gt;fe71cb6f&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3969&quot;&gt;#3969&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add table &lt;code&gt;linenos&lt;/code&gt; support for Chroma highlighter &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/7c30e2cbb08fdf0e61f80c7f1aa29909aeca4211&quot;&gt;7c30e2cb&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3915&quot;&gt;#3915&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Replace &lt;code&gt;make&lt;/code&gt; with &lt;code&gt;mage&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/8d2580f07c0253e12524a4b5c13165f876d00b21&quot;&gt;8d2580f0&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3937&quot;&gt;#3937&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create &lt;code&gt;magefile&lt;/code&gt; from &lt;code&gt;Makefile&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/384a6ac4bd2de16fcd6a1c952e7ca41b66023a12&quot;&gt;384a6ac4&lt;/a&gt; &lt;a href=&quot;https://github.com/natefinch&quot;&gt;@natefinch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clean up lint in various packages &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/47fdfd5196cd24a23b30afe1d88969ffb413ab59&quot;&gt;47fdfd51&lt;/a&gt; &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure &lt;code&gt;Date&lt;/code&gt; and &lt;code&gt;PublishDate&lt;/code&gt; are always set to a value if one is available &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/6a30874f19610a38e846e120aac03c68e12f9b7b&quot;&gt;6a30874f&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3854&quot;&gt;#3854&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add correct config file name to verbose server log &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/15ec031d9818d239bfbff525c00cd99cc3118a96&quot;&gt;15ec031d&lt;/a&gt; &lt;a href=&quot;https://github.com/mdhender&quot;&gt;@mdhender&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>bep</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/394382?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/11180687/v0.29</id>
+    <updated>2017-09-26T22:25:42+03:00</updated>
+    <link rel="alternate" type="text/html" href="/gohugoio/hugo/releases/tag/v0.29"/>
+    <title>v0.29</title>
+    <content type="html">&lt;p&gt;Hugo &lt;code&gt;0.29&lt;/code&gt; brings Template Metrics by &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt;. Hugo is very fast, but it is still possible to write ineffective templates. Now these should be easy to identify. Just run:&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;&lt;pre&gt;hugo --templateMetrics&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, that was the tasty carrot. The real reason this release comes so fast after the last one is to change the default value for the new &lt;code&gt;noHTTPCache&lt;/code&gt; flag, which gives away too much performance to make sense as a default value.&lt;/p&gt;
+&lt;p&gt;Hugo now has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;19817+ &lt;a href=&quot;https://github.com/gohugoio/hugo/stargazers&quot;&gt;stars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;454+ &lt;a href=&quot;https://github.com/gohugoio/hugo/graphs/contributors&quot;&gt;contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;180+ &lt;a href=&quot;http://themes.gohugo.io/&quot;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Make &lt;code&gt;noHTTPCache&lt;/code&gt; default false &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/e94d4f0177852b357f40fb9686a0ff3667d86351&quot;&gt;e94d4f01&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Enhancements&lt;/h2&gt;
+&lt;h3&gt;Templates&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add simple template metrics feature &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/b4a14c25fe85c41b79497be27ead128502a4dd7b&quot;&gt;b4a14c25&lt;/a&gt; &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Set Metrics at creation time &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/b5e1dc5892f81da798d0d4e964a1f3328532f45e&quot;&gt;b5e1dc58&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix sort order &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/d3681f51c08fb11e8addcf9f0b484848d20d46cc&quot;&gt;d3681f51&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add math.Ceil, Floor, and Round to method mappings &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/8a69d2356703d9f2fcb75bce0ae514e70ebd8e01&quot;&gt;8a69d235&lt;/a&gt; &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Split go build in Dockerfile &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/d9697e275ecb038958b3dcea2b43e11dcba28fc9&quot;&gt;d9697e27&lt;/a&gt; &lt;a href=&quot;https://github.com/tjamet&quot;&gt;@tjamet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update Dockerfile to benefit build cache &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/09d960f17396eb7fd2c8fe6527db9503d59f0b4f&quot;&gt;09d960f1&lt;/a&gt; &lt;a href=&quot;https://github.com/tjamet&quot;&gt;@tjamet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add git to snap package for GitInfo &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/a3a3f5b86114213a23337499551f000662b26022&quot;&gt;a3a3f5b8&lt;/a&gt; &lt;a href=&quot;https://github.com/ghalse&quot;&gt;@ghalse&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Automated with &lt;a href=&quot;https://github.com/goreleaser&quot;&gt;GoReleaser&lt;/a&gt;&lt;br&gt;
+Built with go version go1.9 linux/amd64&lt;/p&gt;</content>
+    <author>
+      <name>bep</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/394382?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/11180687/v0.28</id>
+    <updated>2017-09-27T00:44:23+03:00</updated>
+    <link rel="alternate" type="text/html" href="/gohugoio/hugo/releases/tag/v0.28"/>
+    <title>v0.28</title>
+    <content type="html">&lt;p&gt;Hugo &lt;code&gt;0.28&lt;/code&gt; brings &lt;strong&gt;blistering fast and native syntax highlighting&lt;/strong&gt; from &lt;a href=&quot;https://github.com/alecthomas/chroma&quot;&gt;Chroma&lt;/a&gt; (&lt;a href=&quot;https://github.com/gohugoio/hugo/commit/fb33d8286d78a78a74deb44355b621852a1c4033&quot;&gt;fb33d828&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3888&quot;&gt;#3888&lt;/a&gt;). A big thank you to &lt;a href=&quot;https://github.com/alecthomas&quot;&gt;Alec Thomas&lt;/a&gt; for taking on this massive task of porting the popular python highlighter Pygments to Go.&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&quot;https://gohugo.io/content-management/syntax-highlighting/&quot;&gt;Updated Documentation&lt;/a&gt; for more information about how this works.&lt;/p&gt;
+&lt;p&gt;Worth mentioning is also the &lt;code&gt;liveReloadPort&lt;/code&gt;  flag on &lt;code&gt;hugo server&lt;/code&gt;, which makes it possible to do &quot;live reloads&quot; behind a HTTPS proxy, which makes for very cool remote customer demos.&lt;/p&gt;
+&lt;p&gt;One example would be a Hugo server running behind a &lt;a href=&quot;http://ngrok.com&quot;&gt;ngrok&lt;/a&gt; tunnel:&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;&lt;pre&gt;ngrok http 1313&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then start the Hugo server with:&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;&lt;pre&gt;hugo server -b https://youridhere.ngrok.io --appendPort=false --liveReloadPort=443 --navigateToChanged&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code&gt;navigateToChanged&lt;/code&gt; flag is slightly unrelated, but it is super cool ...&lt;/p&gt;
+&lt;p&gt;This release represents &lt;strong&gt;15 contributions by 2 contributors&lt;/strong&gt; to the main Hugo code base.&lt;/p&gt;
+&lt;p&gt;Many have also been busy writing and fixing the documentation in &lt;a href=&quot;https://github.com/gohugoio/hugoDocs&quot;&gt;hugoDocs&lt;/a&gt;,&lt;br&gt;
+which has received &lt;strong&gt;9 contributions by 7 contributors&lt;/strong&gt;. A special thanks to &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;, &lt;a href=&quot;https://github.com/i-give-up&quot;&gt;@i-give-up&lt;/a&gt;, &lt;a href=&quot;https://github.com/muhajirframe&quot;&gt;@muhajirframe&lt;/a&gt;, and &lt;a href=&quot;https://github.com/icannotfly&quot;&gt;@icannotfly&lt;/a&gt; for their work on the documentation site.&lt;/p&gt;
+&lt;p&gt;Hugo now has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;19771+ &lt;a href=&quot;https://github.com/gohugoio/hugo/stargazers&quot;&gt;stars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;454+ &lt;a href=&quot;https://github.com/gohugoio/hugo/graphs/contributors&quot;&gt;contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;180+ &lt;a href=&quot;http://themes.gohugo.io/&quot;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo now uses Chroma as new default syntax highlighter. This should in most cases work out-of-the box or with very little adjustments. But if you want to continue to use Pygments, set &lt;code&gt;pygmentsUseClassic=true&lt;/code&gt; in your site config.&lt;/li&gt;
+&lt;li&gt;We now add a set of &quot;no cache&quot; headers to the responses for &lt;code&gt;hugo server&lt;/code&gt;, which makes the most sense in most development scenarios. Run with &lt;code&gt;hugo server --noHTTPCache=false&lt;/code&gt; to get the old behaviour.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Enhancements&lt;/h2&gt;
+&lt;h3&gt;Templates&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;urls.Parse&lt;/code&gt; function &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/81ed564793609a32be20a569cc15da2cc02dd734&quot;&gt;81ed5647&lt;/a&gt; &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3849&quot;&gt;#3849&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;math.Ceil&lt;/code&gt;, &lt;code&gt;Floor&lt;/code&gt;, and &lt;code&gt;Round&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/19c5910485242838d6678c2aacd8501f7e646a53&quot;&gt;19c59104&lt;/a&gt; &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3883&quot;&gt;#3883&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use Chroma as new default syntax highlighter &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/fb33d8286d78a78a74deb44355b621852a1c4033&quot;&gt;fb33d828&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3888&quot;&gt;#3888&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Trim newlines in the hightlight shortcode &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/0d29a0f7819e8d73149701052c29f090cd6db42b&quot;&gt;0d29a0f7&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3898&quot;&gt;#3898&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update &lt;code&gt;goorgeous&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/b8fabce217fcb52e3f273491bef95c7977058732&quot;&gt;b8fabce2&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3899&quot;&gt;#3899&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;liveReloadPort&lt;/code&gt; flag to server &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/b180477631555824a06293053e2b6e63c5f07361&quot;&gt;b1804776&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3882&quot;&gt;#3882&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;noHTTPCache&lt;/code&gt; flag to hugo server (default on) &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/0b34af216154367af7f53ce93d44e6b3d58c3f34&quot;&gt;0b34af21&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3897&quot;&gt;#3897&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make &lt;code&gt;noHTTPCache&lt;/code&gt; default on &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/80c7ea60a0e0f488563a6b7311f3d4c23457aac7&quot;&gt;80c7ea60&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3897&quot;&gt;#3897&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Automated with &lt;a href=&quot;https://github.com/goreleaser&quot;&gt;GoReleaser&lt;/a&gt;&lt;br&gt;
+Built with go version go1.9 linux/amd64&lt;/p&gt;</content>
+    <author>
+      <name>bep</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/394382?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/11180687/v0.27.1</id>
+    <updated>2017-09-13T14:15:17+03:00</updated>
+    <link rel="alternate" type="text/html" href="/gohugoio/hugo/releases/tag/v0.27.1"/>
+    <title>v0.27.1</title>
+    <content type="html">&lt;p&gt;This fixes a regression introduced in &lt;a href=&quot;https://github.com/golang/go/issues/21844&quot;&gt;Go 1.9&lt;/a&gt; which lead to HTML in shortcodes in multi output Hugo sites being wrongly escaped in some cases.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Fix escaped HTML Go 1.9 multioutput issue (&lt;a href=&quot;https://github.com/gohugoio/hugo/pull/3880&quot; class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load issue title&quot; data-id=&quot;257311588&quot; data-permission-text=&quot;Issue title is private&quot; data-url=&quot;https://github.com/gohugoio/hugo/issues/3880&quot;&gt;#3880&lt;/a&gt;) &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/2d613dd905bb8eeb8af57e30ddd749a0f04fbd3c&quot;&gt;2d613dd9&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3876&quot;&gt;#3876&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bump to Go 1.9 in the Snap build &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/642ba6cab24c558b16378178fe829cbc45845424&quot;&gt;642ba6ca&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Automated with &lt;a href=&quot;https://github.com/goreleaser&quot;&gt;GoReleaser&lt;/a&gt;&lt;br&gt;
+Built with go version go1.9 linux/amd64&lt;/p&gt;</content>
+    <author>
+      <name>bep</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/394382?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/11180687/v0.27</id>
+    <updated>2017-09-11T08:42:24+03:00</updated>
+    <link rel="alternate" type="text/html" href="/gohugoio/hugo/releases/tag/v0.27"/>
+    <title>v0.27</title>
+    <content type="html">&lt;p&gt;Hugo &lt;code&gt;0.27&lt;/code&gt;comes with fast and flexible &lt;strong&gt;Related Content&lt;/strong&gt; (&lt;a href=&quot;https://github.com/gohugoio/hugo/commit/3b4f17bbc9ff789faa581ac278ad109d1ac5b816&quot;&gt;3b4f17bb&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/98&quot;&gt;#98&lt;/a&gt;). To add this to your site, put something like this in your single page template:&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-text-html-basic&quot;&gt;&lt;pre&gt;{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+&amp;lt;&lt;span class=&quot;pl-ent&quot;&gt;h3&lt;/span&gt;&amp;gt;See Also&amp;lt;/&lt;span class=&quot;pl-ent&quot;&gt;h3&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span class=&quot;pl-ent&quot;&gt;ul&lt;/span&gt;&amp;gt;
+	{{ range . }}
+	&amp;lt;&lt;span class=&quot;pl-ent&quot;&gt;li&lt;/span&gt;&amp;gt;&amp;lt;&lt;span class=&quot;pl-ent&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;pl-e&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;{{ .RelPermalink }}&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&amp;gt;{{ .Title }}&amp;lt;/&lt;span class=&quot;pl-ent&quot;&gt;a&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span class=&quot;pl-ent&quot;&gt;li&lt;/span&gt;&amp;gt;
+	{{ end }}
+&amp;lt;/&lt;span class=&quot;pl-ent&quot;&gt;ul&lt;/span&gt;&amp;gt;
+{{ end }}&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The above translates to &lt;em&gt;list the five regular pages mostly related to the current page&lt;/em&gt;. See the &lt;a href=&quot;https://gohugo.io/content-management/related/&quot;&gt;Related Content Documentation&lt;/a&gt; for details and configuration options.&lt;/p&gt;
+&lt;p&gt;This release represents &lt;strong&gt;37 contributions by 9 contributors&lt;/strong&gt; to the main Hugo code base.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt;, &lt;a href=&quot;https://github.com/yihui&quot;&gt;@yihui&lt;/a&gt;, and &lt;a href=&quot;https://github.com/oneleaftea&quot;&gt;@oneleaftea&lt;/a&gt; for their ongoing contributions.&lt;/p&gt;
+&lt;p&gt;And as always a big thanks to &lt;a href=&quot;https://github.com/digitalcraftsman&quot;&gt;@digitalcraftsman&lt;/a&gt; for his relentless work on keeping the documentation and the themes site in pristine condition.&lt;/p&gt;
+&lt;p&gt;Many have also been busy writing and fixing the documentation in &lt;a href=&quot;https://github.com/gohugoio/hugoDocs&quot;&gt;hugoDocs&lt;/a&gt;,&lt;br&gt;
+which has received &lt;strong&gt;44 contributions by 30 contributors&lt;/strong&gt;. A special thanks to &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;, &lt;a href=&quot;https://github.com/sdomino&quot;&gt;@sdomino&lt;/a&gt;, &lt;a href=&quot;https://github.com/gotgenes&quot;&gt;@gotgenes&lt;/a&gt;, and &lt;a href=&quot;https://github.com/digitalcraftsman&quot;&gt;@digitalcraftsman&lt;/a&gt; for their work on the documentation site.&lt;/p&gt;
+&lt;p&gt;Hugo now has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;19464+ &lt;a href=&quot;https://github.com/gohugoio/hugo/stargazers&quot;&gt;stars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;455+ &lt;a href=&quot;https://github.com/gohugoio/hugo/graphs/contributors&quot;&gt;contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;178+ &lt;a href=&quot;http://themes.gohugo.io/&quot;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We now only strip p tag in &lt;code&gt;markdownify&lt;/code&gt; if there is only one paragraph. This allows blocks of paragraphs to be &quot;markdownified&quot; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/33ae10b6ade67cd9618970121d7de5fd2ce7d781&quot;&gt;33ae10b6&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3040&quot;&gt;#3040&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Enhancements&lt;/h2&gt;
+&lt;h3&gt;Templates&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;time.Duration&lt;/code&gt; and &lt;code&gt;time.ParseDuration&lt;/code&gt; template funcs &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/f4bf214137ebd24a0d12f16d3a98d9038e6eabd3&quot;&gt;f4bf2141&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3828&quot;&gt;#3828&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;cond&lt;/code&gt; (ternary) template func &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/0462c96a5a9da3e8adc78d96acd39575a8b46c40&quot;&gt;0462c96a&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3860&quot;&gt;#3860&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prepare for template metrics &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/d000cf605091c6999b72d6c632752289bc680223&quot;&gt;d000cf60&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;strings.TrimLeft&lt;/code&gt; and &lt;code&gt;TrimRight&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/7674ad73825c61eecc4003475fe0577f225fe579&quot;&gt;7674ad73&lt;/a&gt; &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;compare, hugolib, tpl: Add &lt;code&gt;Eqer&lt;/code&gt; interface &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/08f48b91d68d3002b887ddf737456ff0cc4e786d&quot;&gt;08f48b91&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3807&quot;&gt;#3807&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Only strip p tag in &lt;code&gt;markdownify&lt;/code&gt; if only one paragraph &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/33ae10b6ade67cd9618970121d7de5fd2ce7d781&quot;&gt;33ae10b6&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3040&quot;&gt;#3040&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cleanup &lt;code&gt;strings.TrimPrefix&lt;/code&gt; and &lt;code&gt;TrimSuffix&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/29a2da0593b081cdd61b93c6328af2c9ea4eb20f&quot;&gt;29a2da05&lt;/a&gt; &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Output&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Improve the base template (aka &lt;code&gt;baseof.html&lt;/code&gt;) identification &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/0019ce002449d671a20a69406da37b10977f9493&quot;&gt;0019ce00&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Core&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement &quot;related content&quot; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/3b4f17bbc9ff789faa581ac278ad109d1ac5b816&quot;&gt;3b4f17bb&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/98&quot;&gt;#98&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;Page.Equals&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/f0f49ed9b0c9b4545a45c95d56340fcbf4aafbef&quot;&gt;f0f49ed9&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rewrite &lt;code&gt;replaceDivider&lt;/code&gt; to reduce memory allocation &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/71ae9b4533083be185c5314c9c5b273cc3bd07bd&quot;&gt;71ae9b45&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Set up Hugo release flow on &lt;code&gt;CircleCI&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/d2249c50991ba7b00b092aca6e315ca1a4de75a1&quot;&gt;d2249c50&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3779&quot;&gt;#3779&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Maintain the scroll position if possible &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/7231d5a829f8d97336a2120afde1260db6ee6541&quot;&gt;7231d5a8&lt;/a&gt; &lt;a href=&quot;https://github.com/yihui&quot;&gt;@yihui&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3824&quot;&gt;#3824&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add an &lt;code&gt;iFrame&lt;/code&gt; title to the &lt;code&gt;YouTube&lt;/code&gt; shortcode &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/919bc9210a69c801c7304c0b529df93d1dca27aa&quot;&gt;919bc921&lt;/a&gt; &lt;a href=&quot;https://github.com/nraboy&quot;&gt;@nraboy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove the theme submodule from /docs &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/ea2cc26b390476f1c605405604f8c92afd09b6ee&quot;&gt;ea2cc26b&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3791&quot;&gt;#3791&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for multiple config files via &lt;code&gt;--config a.toml,b.toml,c.toml&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/0f9f73cce5c3f1f05be20bcf1d23b2332623d7f9&quot;&gt;0f9f73cc&lt;/a&gt; &lt;a href=&quot;https://github.com/jgielstra&quot;&gt;@jgielstra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Render task list item inside &lt;code&gt;label&lt;/code&gt; for correct accessibility &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/c8257f8b726478ca70dc8984cdcc17b31e4bdc0c&quot;&gt;c8257f8b&lt;/a&gt; &lt;a href=&quot;https://github.com/danieka&quot;&gt;@danieka&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3303&quot;&gt;#3303&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Normalize &lt;code&gt;UniqueID&lt;/code&gt; between Windows &amp;amp; Linux &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/0abdeeef6740a3cbba0db95374853d040f2022b8&quot;&gt;0abdeeef&lt;/a&gt; &lt;a href=&quot;https://github.com/Shywim&quot;&gt;@Shywim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Fixes&lt;/h2&gt;
+&lt;h3&gt;Output&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix taxonomy term base template lookup &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/f88fe312cb35f7de1615c095edd2f898303dd23b&quot;&gt;f88fe312&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3856&quot;&gt;#3856&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;published&lt;/code&gt; front matter handling &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/202510fdc92d52a20baeaa7edb1091f6882bd95f&quot;&gt;202510fd&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3867&quot;&gt;#3867&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Automated with &lt;a href=&quot;https://github.com/goreleaser&quot;&gt;GoReleaser&lt;/a&gt;&lt;br&gt;
+Built with go version go1.9 linux/amd64&lt;/p&gt;</content>
+    <author>
+      <name>bep</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/394382?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/11180687/v0.26</id>
+    <updated>2017-08-07T10:32:04+03:00</updated>
+    <link rel="alternate" type="text/html" href="/gohugoio/hugo/releases/tag/v0.26"/>
+    <title>v0.26</title>
+    <content type="html">&lt;p&gt;Hugo &lt;code&gt;0.26&lt;/code&gt; is the &lt;strong&gt;Language Style Edition&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This release brings a choice of &lt;strong&gt;AP Style or Chicago Style Title Case&lt;/strong&gt; (&lt;a href=&quot;https://github.com/gohugoio/hugo/commit/8fb594bfb090c017d4e5cbb2905780221e202c41&quot;&gt;8fb594bf&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/989&quot;&gt;#989&lt;/a&gt;). You can also now configure Blackfriday to render &lt;strong&gt;« French Guillemets »&lt;/strong&gt; (&lt;a href=&quot;https://github.com/gohugoio/hugo/commit/cb9dfc2613ae5125cafa450097fb0f62dd3770e7&quot;&gt;cb9dfc26&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3725&quot;&gt;#3725&lt;/a&gt;). To enable French Guillemets, put this in your site &lt;code&gt;config.toml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;&lt;pre&gt;[blackfriday]
+angledQuotes = &lt;span class=&quot;pl-c1&quot;&gt;true&lt;/span&gt;
+smartypantsQuotesNBSP = &lt;span class=&quot;pl-c1&quot;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Oh, and this release also fixes it so you should see no ugly long crashes no more when you step wrong in your templates (&lt;a href=&quot;https://github.com/gohugoio/hugo/commit/794ea21e9449b876c5514f1ce8fe61449bbe4980&quot;&gt;794ea21e&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Hugo &lt;code&gt;0.26&lt;/code&gt; represents &lt;strong&gt;46 contributions by 11 contributors&lt;/strong&gt; to the main Hugo code base.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&quot;https://github.com/anthonyfok&quot;&gt;@anthonyfok&lt;/a&gt;, &lt;a href=&quot;https://github.com/jorinvo&quot;&gt;@jorinvo&lt;/a&gt;, and &lt;a href=&quot;https://github.com/digitalcraftsman&quot;&gt;@digitalcraftsman&lt;/a&gt; for their ongoing contributions. And as always a big thanks to &lt;a href=&quot;https://github.com/digitalcraftsman&quot;&gt;@digitalcraftsman&lt;/a&gt; for his relentless work on keeping the documentation and the themes site in pristine condition.&lt;/p&gt;
+&lt;p&gt;Many have also been busy writing and fixing the documentation in &lt;a href=&quot;https://github.com/gohugoio/hugoDocs&quot;&gt;hugoDocs&lt;/a&gt;,&lt;br&gt;
+which has received &lt;strong&gt;838 contributions by 30 contributors&lt;/strong&gt;. A special thanks to &lt;a href=&quot;https://github.com/rdwatters&quot;&gt;@rdwatters&lt;/a&gt;, &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;,  &lt;a href=&quot;https://github.com/digitalcraftsman&quot;&gt;@digitalcraftsman&lt;/a&gt;, and  &lt;a href=&quot;https://github.com/budparr&quot;&gt;@budparr&lt;/a&gt; for their work on the documentation site.&lt;/p&gt;
+&lt;p&gt;This may look like a &lt;strong&gt;Waiting Sausage&lt;/strong&gt;, a barbecue term used in Norway for that sausage you eat while waiting for the steak to get ready. And it is: We&#39;re working on bigger and even more interesting changes behind the scenes. Stay tuned!&lt;/p&gt;
+&lt;p&gt;Hugo now has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;18802+ &lt;a href=&quot;https://github.com/gohugoio/hugo/stargazers&quot;&gt;stars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;457+ &lt;a href=&quot;https://github.com/gohugoio/hugo/graphs/contributors&quot;&gt;contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;175+ &lt;a href=&quot;http://themes.gohugo.io/&quot;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sourceRelativeLinks&lt;/code&gt; has been deprecated for a while and has now been removed. &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/9891c0fb0eb274b8a95b62c40070a87a6e04088c&quot;&gt;9891c0fb&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3766&quot;&gt;#3766&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;title&lt;/code&gt; template function and taxonomy page titles now default to following the &lt;a href=&quot;https://www.apstylebook.com/&quot;&gt;AP Stylebook&lt;/a&gt; for title casing.  To override this default to use the old behavior, set &lt;code&gt;titleCaseStyle&lt;/code&gt; to &lt;code&gt;Go&lt;/code&gt; in your site configuration. &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/8fb594bfb090c017d4e5cbb2905780221e202c41&quot;&gt;8fb594bf&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/989&quot;&gt;#989&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Enhancements&lt;/h2&gt;
+&lt;h3&gt;Templates&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use hash for cache key &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/6cd33f6953671edb13d42dcb15746bd10df3428b&quot;&gt;6cd33f69&lt;/a&gt; &lt;a href=&quot;https://github.com/RealOrangeOne&quot;&gt;@RealOrangeOne&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3690&quot;&gt;#3690&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add some empty slice tests to intersect &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/e0cf2e05bbdcb8b4a3f875df84a878f4ca80e904&quot;&gt;e0cf2e05&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3686&quot;&gt;#3686&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Core&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support &lt;code&gt;reflinks&lt;/code&gt; starting with a slash &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/dbe63970e09313dec287816ab070b5c2f5a13b1b&quot;&gt;dbe63970&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3703&quot;&gt;#3703&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make template panics into nice error messages &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/794ea21e9449b876c5514f1ce8fe61449bbe4980&quot;&gt;794ea21e&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Make the &lt;code&gt;title&lt;/code&gt; case style guide configurable &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/8fb594bfb090c017d4e5cbb2905780221e202c41&quot;&gt;8fb594bf&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/989&quot;&gt;#989&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for French Guillemets &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/cb9dfc2613ae5125cafa450097fb0f62dd3770e7&quot;&gt;cb9dfc26&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3725&quot;&gt;#3725&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for French Guillemets &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/c4a0b6e8abdf9f800fbd7a7f89e9f736edc60431&quot;&gt;c4a0b6e8&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3725&quot;&gt;#3725&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Switch from fork bep/inflect to markbates/inflect &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/09907d36af586c5b29389312f2ecc2962c06313c&quot;&gt;09907d36&lt;/a&gt; &lt;a href=&quot;https://github.com/jorinvo&quot;&gt;@jorinvo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove unused dependencies from vendor.json &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/9b4170ce768717adfbe9d97c46e38ceaec2ce994&quot;&gt;9b4170ce&lt;/a&gt; &lt;a href=&quot;https://github.com/jorinvo&quot;&gt;@jorinvo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--debug&lt;/code&gt; option to be improved on over time &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/aee2b06780858c12d8cb04c7b1ba592543410aa9&quot;&gt;aee2b067&lt;/a&gt; &lt;a href=&quot;https://github.com/maxandersen&quot;&gt;@maxandersen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reduce Docker image size from 277MB to 27MB &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/bfe0bfbbd1a59ddadb72a6b07fecce71716088ec&quot;&gt;bfe0bfbb&lt;/a&gt; &lt;a href=&quot;https://github.com/ellerbrock&quot;&gt;@ellerbrock&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3730&quot;&gt;#3730&lt;/a&gt;&lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3738&quot;&gt;#3738&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optimize Docker image size &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/606d6a8c9177dda4551ed198e0aabbe569f0725d&quot;&gt;606d6a8c&lt;/a&gt; &lt;a href=&quot;https://github.com/ellerbrock&quot;&gt;@ellerbrock&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3674&quot;&gt;#3674&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--trace&lt;/code&gt; to asciidoctor args &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/b60aa1a504f3fbf9c19a6bf2030fdc7a04ab4a5a&quot;&gt;b60aa1a5&lt;/a&gt; &lt;a href=&quot;https://github.com/miltador&quot;&gt;@miltador&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3714&quot;&gt;#3714&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add script to pull in docs changes &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/ff433f98133662063cbb16e220fd44c678c82823&quot;&gt;ff433f98&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;HasShortcode&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/deccc54004cbe88ddbf8f3f951d3178dc0693189&quot;&gt;deccc540&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3707&quot;&gt;#3707&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve the twitter card template &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/00b590d7ab4f3021814acceaf74c4eaf64edb226&quot;&gt;00b590d7&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3711&quot;&gt;#3711&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;GOEXE&lt;/code&gt; to support building with different versions of &lt;code&gt;go&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/ea5e9e346c93320538c6517b619b5f57473291c8&quot;&gt;ea5e9e34&lt;/a&gt; &lt;a href=&quot;https://github.com/mdhender&quot;&gt;@mdhender&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Fixes&lt;/h2&gt;
+&lt;h3&gt;Templates&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix intersect on &lt;code&gt;[]interface{}&lt;/code&gt; handling &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/55d0b89417651eba3ae51c96bd9de9e0daa0399e&quot;&gt;55d0b894&lt;/a&gt; &lt;a href=&quot;https://github.com/moorereason&quot;&gt;@moorereason&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3718&quot;&gt;#3718&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix broken &lt;code&gt;TaskList&lt;/code&gt; in Markdown &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/481924b34d23b0ce435778cce7bce77571b22f9d&quot;&gt;481924b3&lt;/a&gt; &lt;a href=&quot;https://github.com/mpcabd&quot;&gt;@mpcabd&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3710&quot;&gt;#3710&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Automated with &lt;a href=&quot;https://github.com/goreleaser&quot;&gt;GoReleaser&lt;/a&gt;&lt;br&gt;
+Built with go version go1.8.3 darwin/amd64&lt;/p&gt;</content>
+    <author>
+      <name>bep</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/394382?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/11180687/v0.25.1</id>
+    <updated>2017-07-10T10:07:53+03:00</updated>
+    <link rel="alternate" type="text/html" href="/gohugoio/hugo/releases/tag/v0.25.1"/>
+    <title>v0.25.1</title>
+    <content type="html">&lt;p&gt;This is a bug-fix release with a couple of important fixes.&lt;/p&gt;
+&lt;p&gt;Hugo now has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;18277+ &lt;a href=&quot;https://github.com/gohugoio/hugo/stargazers&quot;&gt;stars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;456+ &lt;a href=&quot;https://github.com/gohugoio/hugo/graphs/contributors&quot;&gt;contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;170+ &lt;a href=&quot;http://themes.gohugo.io/&quot;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix union when the first slice is empty &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/dbbc5c4810a04ac06fad7500d88cf5c3bfe0c7fd&quot;&gt;dbbc5c48&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3686&quot;&gt;#3686&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Navigate to changed on CREATE When working with content from IntelliJ IDE, like WebStorm, every file save is followed by two events: &quot;RENAME&quot; and then &quot;CREATE&quot;. &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/7bcc1ce659710f2220b400ce3b76e50d2e48b241&quot;&gt;7bcc1ce6&lt;/a&gt; &lt;a href=&quot;https://github.com/miltador&quot;&gt;@miltador&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Final (!) fix for issue with escaped JSON front matter &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/7f82b41a24af0fd04d28fbfebf9254766a3c6e6f&quot;&gt;7f82b41a&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3682&quot;&gt;#3682&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix issue with escaped JSON front matter &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/84db6c74a084d2b52117b999d4ec343cd3389a68&quot;&gt;84db6c74&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3682&quot;&gt;#3682&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Automated with &lt;a href=&quot;https://github.com/goreleaser&quot;&gt;GoReleaser&lt;/a&gt;&lt;br&gt;
+Built with go version go1.8.3 darwin/amd64&lt;/p&gt;</content>
+    <author>
+      <name>bep</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/394382?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/11180687/v0.25</id>
+    <updated>2017-07-07T10:40:42+03:00</updated>
+    <link rel="alternate" type="text/html" href="/gohugoio/hugo/releases/tag/v0.25"/>
+    <title>v0.25</title>
+    <content type="html">&lt;p&gt;Hugo &lt;code&gt;0.25&lt;/code&gt; is the &lt;strong&gt;Kinder Surprise&lt;/strong&gt;: It automatically opens the page you&#39;re working on in the browser, it adds full &lt;code&gt;AND&lt;/code&gt; and &lt;code&gt;OR&lt;/code&gt; support in page queries, and you can now have templates per language.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://camo.githubusercontent.com/e2e7f9d95fe4c1b4444596e768ccbe3a37a6bf54/68747470733a2f2f63646e2d7374616e64617264352e646973636f757273652e6f72672f75706c6f6164732f676f6875676f2f6f7074696d697a65642f32582f362f363232303838643461386561636166363262626261613237646162313964373839653130666530395f315f363930783334352e676966&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://camo.githubusercontent.com/e2e7f9d95fe4c1b4444596e768ccbe3a37a6bf54/68747470733a2f2f63646e2d7374616e64617264352e646973636f757273652e6f72672f75706c6f6164732f676f6875676f2f6f7074696d697a65642f32582f362f363232303838643461386561636166363262626261613237646162313964373839653130666530395f315f363930783334352e676966&quot; alt=&quot;Hugo Open on Save&quot; title=&quot;Hugo Open on Save&quot; data-canonical-src=&quot;https://cdn-standard5.discourse.org/uploads/gohugo/optimized/2X/6/622088d4a8eacaf62bbbaa27dab19d789e10fe09_1_690x345.gif&quot; style=&quot;max-width:100%;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you start with &lt;code&gt;hugo server --navigateToChanged&lt;/code&gt;, Hugo will navigate to the relevant page on save (see animated GIF). This is extremely useful for site-wide edits. Another very useful feature in this version is the added support for &lt;code&gt;AND&lt;/code&gt; (&lt;code&gt;intersect&lt;/code&gt;)  and &lt;code&gt;OR&lt;/code&gt; (&lt;code&gt;union&lt;/code&gt;)  filters when combined with &lt;code&gt;where&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-go&quot;&gt;&lt;pre&gt;{{ $&lt;span class=&quot;pl-smi&quot;&gt;pages&lt;/span&gt; &lt;span class=&quot;pl-k&quot;&gt;:=&lt;/span&gt; where .&lt;span class=&quot;pl-smi&quot;&gt;Site&lt;/span&gt;.&lt;span class=&quot;pl-smi&quot;&gt;RegularPages&lt;/span&gt; &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;Type&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;not in&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; (slice &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;page&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;about&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;) }}
+{{ $&lt;span class=&quot;pl-smi&quot;&gt;pages&lt;/span&gt; &lt;span class=&quot;pl-k&quot;&gt;:=&lt;/span&gt; $pages | &lt;span class=&quot;pl-c1&quot;&gt;union&lt;/span&gt; (where .&lt;span class=&quot;pl-smi&quot;&gt;Site&lt;/span&gt;.&lt;span class=&quot;pl-smi&quot;&gt;RegularPages&lt;/span&gt; &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;Params.pinned&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;pl-c1&quot;&gt;true&lt;/span&gt;) }}
+{{ $&lt;span class=&quot;pl-smi&quot;&gt;pages&lt;/span&gt; &lt;span class=&quot;pl-k&quot;&gt;:=&lt;/span&gt; $pages | &lt;span class=&quot;pl-c1&quot;&gt;intersect&lt;/span&gt; (where .&lt;span class=&quot;pl-smi&quot;&gt;Site&lt;/span&gt;.&lt;span class=&quot;pl-smi&quot;&gt;RegularPages&lt;/span&gt; &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;Params.images&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;!=&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;pl-c1&quot;&gt;nil&lt;/span&gt;) }}&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The above fetches regular pages not of &lt;code&gt;page&lt;/code&gt; or &lt;code&gt;about&lt;/code&gt; type unless they are pinned. And finally, we exclude all pages with no &lt;code&gt;images&lt;/code&gt; set in Page params.&lt;/p&gt;
+&lt;p&gt;This release represents &lt;strong&gt;36 contributions by 12 contributors&lt;/strong&gt; to the main Hugo code base. &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; still leads the Hugo development with his witty Norwegian humor, and once again contributed a significant amount of additions. But also a big shoutout to &lt;a href=&quot;https://github.com/yihui&quot;&gt;@yihui&lt;/a&gt;, &lt;a href=&quot;https://github.com/anthonyfok&quot;&gt;@anthonyfok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/kropp&quot;&gt;@kropp&lt;/a&gt; for their ongoing contributions. And as always a big thanks to &lt;a href=&quot;https://github.com/digitalcraftsman&quot;&gt;@digitalcraftsman&lt;/a&gt; for his relentless work on keeping the documentation and the themes site in pristine condition.&lt;/p&gt;
+&lt;p&gt;Hugo now has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;18209+ &lt;a href=&quot;https://github.com/gohugoio/hugo/stargazers&quot;&gt;stars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;455+ &lt;a href=&quot;https://github.com/gohugoio/hugo/graphs/contributors&quot;&gt;contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;168+ &lt;a href=&quot;http://themes.gohugo.io/&quot;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Enhancements&lt;/h2&gt;
+&lt;h3&gt;Templates&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;Pages&lt;/code&gt; support to &lt;code&gt;intersect&lt;/code&gt; (&lt;code&gt;AND&lt;/code&gt;) and &lt;code&gt;union&lt;/code&gt;(&lt;code&gt;ÒR&lt;/code&gt;). This makes the &lt;code&gt;where&lt;/code&gt; template func even more powerful. &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/ccdd08d57ab64441e93d6861ae126b5faacdb92f&quot;&gt;ccdd08d5&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3174&quot;&gt;#3174&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;math.Log&lt;/code&gt; function. This is very handy for creating tag clouds. &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/34c566773a1364077e1397daece85b22948dc721&quot;&gt;34c56677&lt;/a&gt; &lt;a href=&quot;https://github.com/artem-sidorenko&quot;&gt;@artem-sidorenko&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;WebP&lt;/code&gt; images support &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/8431c8d39d878c18c6b5463d9091a953608df10b&quot;&gt;8431c8d3&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3529&quot;&gt;#3529&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Only show post&#39;s own keywords in schema.org &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/da72805a4304a57362e8e79a01cc145767b027c5&quot;&gt;da72805a&lt;/a&gt; &lt;a href=&quot;https://github.com/brunoamaral&quot;&gt;@brunoamaral&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/2635&quot;&gt;#2635&lt;/a&gt;&lt;a href=&quot;https://github.com/gohugoio/hugo/issues/2646&quot;&gt;#2646&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Simplify the &lt;code&gt;Disqus&lt;/code&gt; template a little bit (&lt;a href=&quot;https://github.com/gohugoio/hugo/pull/3655&quot; class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load issue title&quot; data-id=&quot;238869116&quot; data-permission-text=&quot;Issue title is private&quot; data-url=&quot;https://github.com/gohugoio/hugo/issues/3655&quot;&gt;#3655&lt;/a&gt;) &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/eccb0647821e9db20ba9800da1b4861807cc5205&quot;&gt;eccb0647&lt;/a&gt; &lt;a href=&quot;https://github.com/yihui&quot;&gt;@yihui&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve the built-in Disqus template (&lt;a href=&quot;https://github.com/gohugoio/hugo/pull/3639&quot; class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load issue title&quot; data-id=&quot;238194424&quot; data-permission-text=&quot;Issue title is private&quot; data-url=&quot;https://github.com/gohugoio/hugo/issues/3639&quot;&gt;#3639&lt;/a&gt;) &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/2e1e4934b60ce8081a7f3a79191ed204f3098481&quot;&gt;2e1e4934&lt;/a&gt; &lt;a href=&quot;https://github.com/yihui&quot;&gt;@yihui&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Output&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support templates per site/language. This is for both regular templates and shortcode templates. &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/aa6b1b9be7c9d7322333893b642aaf8c7a5f2c2e&quot;&gt;aa6b1b9b&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3360&quot;&gt;#3360&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Core&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Extend the sections API &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/a1d260b41a6673adef679ec4e262c5f390432cf5&quot;&gt;a1d260b4&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3591&quot;&gt;#3591&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make &lt;code&gt;.Site.Sections&lt;/code&gt; return the top level sections &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/dd9b1baab0cb860a3eb32fd9043bac18cab3f9f0&quot;&gt;dd9b1baa&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3591&quot;&gt;#3591&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Render &lt;code&gt;404.html&lt;/code&gt; for all languages &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/41805dca9e40e9b0952e04d06074e6fc91140495&quot;&gt;41805dca&lt;/a&gt; &lt;a href=&quot;https://github.com/mitchchn&quot;&gt;@mitchchn&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3598&quot;&gt;#3598&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support human-readable &lt;code&gt;YAML&lt;/code&gt; boolean values in &lt;code&gt;undraft&lt;/code&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/1039356edf747f044c989a5bc0e85d792341ed5d&quot;&gt;1039356e&lt;/a&gt; &lt;a href=&quot;https://github.com/kropp&quot;&gt;@kropp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hugo import jekyll&lt;/code&gt; support nested &lt;code&gt;_posts&lt;/code&gt; directories &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/7ee1f25e9ef3be8f99c171e8e7982f4f82c13e16&quot;&gt;7ee1f25e&lt;/a&gt; &lt;a href=&quot;https://github.com/coderzh&quot;&gt;@coderzh&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/1890&quot;&gt;#1890&lt;/a&gt;&lt;a href=&quot;https://github.com/gohugoio/hugo/issues/1911&quot;&gt;#1911&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update &lt;code&gt;Dockerfile&lt;/code&gt; and add Docker optimizations &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/118f8f7cf22d756d8a894ff93551974a806f2155&quot;&gt;118f8f7c&lt;/a&gt; &lt;a href=&quot;https://github.com/ellerbrock&quot;&gt;@ellerbrock&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add Blackfriday &lt;code&gt;joinLines&lt;/code&gt; extension support (&lt;a href=&quot;https://github.com/gohugoio/hugo/pull/3574&quot; class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load issue title&quot; data-id=&quot;234754515&quot; data-permission-text=&quot;Issue title is private&quot; data-url=&quot;https://github.com/gohugoio/hugo/issues/3574&quot;&gt;#3574&lt;/a&gt;) &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/a54404968a4b36579797f2e7ff7f5eada94866d9&quot;&gt;a5440496&lt;/a&gt; &lt;a href=&quot;https://github.com/choueric&quot;&gt;@choueric&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;add &lt;code&gt;--initial-header-level=2&lt;/code&gt; to rst2html (&lt;a href=&quot;https://github.com/gohugoio/hugo/pull/3528&quot; class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load issue title&quot; data-id=&quot;231503996&quot; data-permission-text=&quot;Issue title is private&quot; data-url=&quot;https://github.com/gohugoio/hugo/issues/3528&quot;&gt;#3528&lt;/a&gt;) &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/bfce30d85972c27c27e8a2caac9db6315f813298&quot;&gt;bfce30d8&lt;/a&gt; &lt;a href=&quot;https://github.com/frankbraun&quot;&gt;@frankbraun&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support open &quot;current content page&quot; in browser &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/c825a7312131b4afa67ee90d593640dee3525d98&quot;&gt;c825a731&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3643&quot;&gt;#3643&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make &lt;code&gt;--navigateToChanged&lt;/code&gt; more robust on Windows &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/30e14cc31678ddc204b082ab362f86b6b8063881&quot;&gt;30e14cc3&lt;/a&gt; &lt;a href=&quot;https://github.com/anthonyfok&quot;&gt;@anthonyfok&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3645&quot;&gt;#3645&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove the docs submodule &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/31393f6024416ea1b2e61d1080dfd7104df36eda&quot;&gt;31393f60&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3647&quot;&gt;#3647&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;example.com&lt;/code&gt; as homepage for new theme &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/aff1ac3235b6c075d01f7237addf44fecdd36d82&quot;&gt;aff1ac32&lt;/a&gt; &lt;a href=&quot;https://github.com/anthonyfok&quot;&gt;@anthonyfok&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Fixes&lt;/h2&gt;
+&lt;h3&gt;Templates&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix &lt;code&gt;in&lt;/code&gt; function for JSON arrays &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/d12cf5a25df00fa16c59f0b2ae282187a398214c&quot;&gt;d12cf5a2&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/1468&quot;&gt;#1468&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix handling of &lt;code&gt;JSON&lt;/code&gt; front matter with escaped quotes &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/e10e51a00827b9fdc1bee51439fef05afc529831&quot;&gt;e10e51a0&lt;/a&gt; &lt;a href=&quot;https://github.com/bep&quot;&gt;@bep&lt;/a&gt; &lt;a href=&quot;https://github.com/gohugoio/hugo/issues/3661&quot;&gt;#3661&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix typo in code comment &lt;a href=&quot;https://github.com/gohugoio/hugo/commit/56d82aa025f4d2edb1dc6315132cd7ab52df649a&quot;&gt;56d82aa0&lt;/a&gt; &lt;a href=&quot;https://github.com/dvic&quot;&gt;@dvic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Automated with &lt;a href=&quot;https://github.com/goreleaser&quot; class=&quot;user-mention&quot;&gt;@goreleaser&lt;/a&gt;&lt;br&gt;
+Built with go version go1.8.3 darwin/amd64&lt;/p&gt;</content>
+    <author>
+      <name>bep</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/394382?s=60&amp;v=4"/>
+  </entry>
+</feed>

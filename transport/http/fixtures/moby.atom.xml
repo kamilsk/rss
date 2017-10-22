@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/moby/moby/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/moby/moby/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/moby/moby/releases.atom"/>
+  <title>Release notes from moby</title>
+  <updated>2017-06-28T06:47:21+03:00</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/7691631/v17.03.2-ce</id>
+    <updated>2017-06-28T06:57:02+03:00</updated>
+    <link rel="alternate" type="text/html" href="/moby/moby/releases/tag/v17.03.2-ce"/>
+    <title>v17.03.2-ce</title>
+    <content type="html">&lt;h2&gt;17.03.2-ce (2017-06-27)&lt;/h2&gt;
+&lt;h3&gt;Networking&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix a concurrency issue preventing network creation &lt;a href=&quot;https://github.com/moby/moby/pull/33273&quot;&gt;#33273&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Runtime&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Relabel secrets path to avoid a Permission Denied on selinux enabled systems &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/32529&quot;&gt;#32529&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix cases where local volume were not properly relabeled if needed &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/29428&quot;&gt;#29428&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Fix an issue while upgrading if a plugin rootfs was still mounted &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/32525&quot;&gt;#32525&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Fix an issue where volume wouldn&#39;t default to the &lt;code&gt;rprivate&lt;/code&gt; propagation mode &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/32851&quot;&gt;#32851&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Fix a panic that could occur when a volume driver could not be retrieved &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/32347&quot;&gt;#32347&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a warning in &lt;code&gt;docker info&lt;/code&gt; when the &lt;code&gt;overlay&lt;/code&gt; or &lt;code&gt;overlay2&lt;/code&gt; graphdriver is used on a filesystem without &lt;code&gt;d_type&lt;/code&gt; support &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/31290&quot;&gt;#31290&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix an issue with backporting mount spec to older volumes &lt;a href=&quot;https://github.com/moby/moby/pull/33207&quot;&gt;#33207&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix issue where a failed unmount can lead to data loss on local volume remove &lt;a href=&quot;https://github.com/moby/moby/pull/33120&quot;&gt;#33120&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Swarm Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix a case where tasks could get killed unexpectedly &lt;a href=&quot;https://github.com/moby/moby/pull/33118&quot;&gt;#33118&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix an issue preventing to deploy services if the registry cannot be reached despite the needed images being locally present &lt;a href=&quot;https://github.com/moby/moby/pull/33117&quot;&gt;#33117&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Downloads&lt;/h2&gt;
+&lt;p&gt;Docker CE 17.03.2 is available from the &lt;a href=&quot;https://store.docker.com/search?type=edition&amp;amp;offering=community&quot;&gt;Docker Store&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>tiborvass</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/827131?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/7691631/v17.03.2-ce-rc1</id>
+    <updated>2017-05-30T19:25:49+03:00</updated>
+    <link rel="alternate" type="text/html" href="/moby/moby/releases/tag/v17.03.2-ce-rc1"/>
+    <title>v17.03.2-ce-rc1</title>
+    <content type="html">&lt;h2&gt;17.03.2-ce (2017-05-29)&lt;/h2&gt;
+&lt;h3&gt;Networking&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix a concurrency issue preventing network creation &lt;a href=&quot;https://github.com/moby/moby/pull/33273&quot;&gt;#33273&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Runtime&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Relabel secrets path to avoid a Permission Denied on selinux enabled systems &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/32529&quot;&gt;#32529&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix cases where local volume were not properly relabeled if needed &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/29428&quot;&gt;#29428&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Fix an issue while upgrading if a plugin rootfs was still mounted &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/32525&quot;&gt;#32525&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Fix an issue where volume wouldn&#39;t default to the &lt;code&gt;rprivate&lt;/code&gt; propagation mode &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/32851&quot;&gt;#32851&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Fix a panic that could occur when a volume driver could not be retrieved &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/32347&quot;&gt;#32347&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a warning in &lt;code&gt;docker info&lt;/code&gt; when the &lt;code&gt;overlay&lt;/code&gt; or &lt;code&gt;overlay2&lt;/code&gt; graphdriver is used on a filesystem without &lt;code&gt;d_type&lt;/code&gt; support &lt;a href=&quot;https://github.com/moby/moby/pull/33236&quot;&gt;#33236&lt;/a&gt; (ref &lt;a href=&quot;https://github.com/moby/moby/pull/31290&quot;&gt;#31290&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix an issue with backporting mount spec to older volumes &lt;a href=&quot;https://github.com/moby/moby/pull/33207&quot;&gt;#33207&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix issue where a failed unmount can lead to data loss on local volume remove &lt;a href=&quot;https://github.com/moby/moby/pull/33120&quot;&gt;#33120&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Swarm Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix a case where tasks could get killed unexpectedly &lt;a href=&quot;https://github.com/moby/moby/pull/33118&quot;&gt;#33118&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix an issue preventing to deploy services if the registry cannot be reached despite the needed images being locally present &lt;a href=&quot;https://github.com/moby/moby/pull/33117&quot;&gt;#33117&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Downloads&lt;/h2&gt;
+&lt;p&gt;Docker CE 17.03.2-rc1 is available from the &lt;a href=&quot;https://store.docker.com/search?type=edition&amp;amp;offering=community&quot;&gt;Docker Store&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>mlaventure</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/16065150?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/7691631/v17.05.0-ce</id>
+    <updated>2017-05-05T21:09:56+03:00</updated>
+    <link rel="alternate" type="text/html" href="/moby/moby/releases/tag/v17.05.0-ce"/>
+    <title>v17.05.0-ce</title>
+    <content type="html">&lt;h1&gt;Changelog&lt;/h1&gt;
+&lt;p&gt;Items starting with &lt;code&gt;DEPRECATE&lt;/code&gt; are important deprecation notices. For more&lt;br&gt;
+information on the list of deprecated flags and APIs please have a look at&lt;br&gt;
+&lt;a href=&quot;https://docs.docker.com/engine/deprecated/&quot;&gt;https://docs.docker.com/engine/deprecated/&lt;/a&gt; where target removal dates can also&lt;br&gt;
+be found.&lt;/p&gt;
+&lt;h2&gt;17.05.0-ce (2017-05-04)&lt;/h2&gt;
+&lt;h3&gt;Builder&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add multi-stage build support &lt;a href=&quot;https://github.com/docker/docker/pull/31257&quot;&gt;#31257&lt;/a&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32063&quot;&gt;#32063&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Allow using build-time args (&lt;code&gt;ARG&lt;/code&gt;) in &lt;code&gt;FROM&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31352&quot;&gt;#31352&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add an option for specifying build target &lt;a href=&quot;https://github.com/docker/docker/pull/32496&quot;&gt;#32496&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Accept &lt;code&gt;-f -&lt;/code&gt; to read Dockerfile from &lt;code&gt;stdin&lt;/code&gt;, but use local context for building &lt;a href=&quot;https://github.com/docker/docker/pull/31236&quot;&gt;#31236&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The values of default build time arguments (e.g &lt;code&gt;HTTP_PROXY&lt;/code&gt;) are no longer displayed in docker image history unless a corresponding &lt;code&gt;ARG&lt;/code&gt; instruction is written in the Dockerfile. &lt;a href=&quot;https://github.com/docker/docker/pull/31584&quot;&gt;#31584&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix setting command if a custom shell is used in a parent image &lt;a href=&quot;https://github.com/docker/docker/pull/32236&quot;&gt;#32236&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker build --label&lt;/code&gt; when the label includes single quotes and a space &lt;a href=&quot;https://github.com/docker/docker/pull/31750&quot;&gt;#31750&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Client&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--mount&lt;/code&gt; flag to &lt;code&gt;docker run&lt;/code&gt; and &lt;code&gt;docker create&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32251&quot;&gt;#32251&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--type=secret&lt;/code&gt; to &lt;code&gt;docker inspect&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32124&quot;&gt;#32124&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--format&lt;/code&gt; option to &lt;code&gt;docker secret ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31552&quot;&gt;#31552&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter&lt;/code&gt; option to &lt;code&gt;docker secret ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30810&quot;&gt;#30810&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter scope=&amp;lt;swarm|local&amp;gt;&lt;/code&gt; to &lt;code&gt;docker network ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31529&quot;&gt;#31529&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--cpus&lt;/code&gt; support to &lt;code&gt;docker update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31148&quot;&gt;#31148&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add label filter to &lt;code&gt;docker system prune&lt;/code&gt; and other &lt;code&gt;prune&lt;/code&gt; commands &lt;a href=&quot;https://github.com/docker/docker/pull/30740&quot;&gt;#30740&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker stack rm&lt;/code&gt; now accepts multiple stacks as input &lt;a href=&quot;https://github.com/docker/docker/pull/32110&quot;&gt;#32110&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve &lt;code&gt;docker version --format&lt;/code&gt; option when the client has downgraded the API version &lt;a href=&quot;https://github.com/docker/docker/pull/31022&quot;&gt;#31022&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prompt when using an encrypted client certificate to connect to a docker daemon &lt;a href=&quot;https://github.com/docker/docker/pull/31364&quot;&gt;#31364&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Display created tags on successful &lt;code&gt;docker build&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32077&quot;&gt;#32077&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cleanup compose convert error messages &lt;a href=&quot;https://github.com/moby/moby/pull/32087&quot;&gt;#32087&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Contrib&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for building docker debs for Ubuntu 17.04 Zesty on amd64 &lt;a href=&quot;https://github.com/docker/docker/pull/32435&quot;&gt;#32435&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Daemon&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix &lt;code&gt;--api-cors-header&lt;/code&gt; being ignored if &lt;code&gt;--api-enable-cors&lt;/code&gt; is not set &lt;a href=&quot;https://github.com/docker/docker/pull/32174&quot;&gt;#32174&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cleanup docker tmp dir on start &lt;a href=&quot;https://github.com/docker/docker/pull/31741&quot;&gt;#31741&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Deprecate &lt;code&gt;--graph&lt;/code&gt; flag in favor or &lt;code&gt;--data-root&lt;/code&gt;  &lt;a href=&quot;https://github.com/docker/docker/pull/28696&quot;&gt;#28696&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Logging&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for logging driver plugins &lt;a href=&quot;https://github.com/docker/docker/pull/28403&quot;&gt;#28403&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for showing logs of individual tasks to &lt;code&gt;docker service logs&lt;/code&gt;, and add &lt;code&gt;/task/{id}/logs&lt;/code&gt; REST endpoint &lt;a href=&quot;https://github.com/docker/docker/pull/32015&quot;&gt;#32015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--log-opt env-regex&lt;/code&gt; option to match environment variables using a regular expression &lt;a href=&quot;https://github.com/docker/docker/pull/27565&quot;&gt;#27565&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Networking&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow user to replace, and customize the ingress network &lt;a href=&quot;https://github.com/docker/docker/pull/31714&quot;&gt;#31714&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix UDP traffic in containers not working after the container is restarted &lt;a href=&quot;https://github.com/docker/docker/pull/32505&quot;&gt;#32505&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix files being written to &lt;code&gt;/var/lib/docker&lt;/code&gt; if a different data-root is set &lt;a href=&quot;https://github.com/docker/docker/pull/32505&quot;&gt;#32505&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Runtime&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure health probe is stopped when a container exits &lt;a href=&quot;https://github.com/docker/docker/pull/32274&quot;&gt;#32274&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Swarm Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add update/rollback order for services (&lt;code&gt;--update-order&lt;/code&gt; / &lt;code&gt;--rollback-order&lt;/code&gt;) &lt;a href=&quot;https://github.com/docker/docker/pull/30261&quot;&gt;#30261&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for synchronous &lt;code&gt;service create&lt;/code&gt; and &lt;code&gt;service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31144&quot;&gt;#31144&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for &quot;grace periods&quot; on healthchecks through the &lt;code&gt;HEALTHCHECK --start-period&lt;/code&gt; and &lt;code&gt;--health-start-period&lt;/code&gt; flag to&lt;br&gt;
+&lt;code&gt;docker service create&lt;/code&gt;, &lt;code&gt;docker service update&lt;/code&gt;, &lt;code&gt;docker create&lt;/code&gt;, and &lt;code&gt;docker run&lt;/code&gt; to support containers with an initial startup&lt;br&gt;
+time &lt;a href=&quot;https://github.com/docker/docker/pull/28938&quot;&gt;#28938&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;docker service create&lt;/code&gt; now omits fields that are not specified by the user, when possible. This will allow defaults to be applied inside the manager &lt;a href=&quot;https://github.com/docker/docker/pull/32284&quot;&gt;#32284&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker service inspect&lt;/code&gt; now shows default values for fields that are not specified by the user &lt;a href=&quot;https://github.com/docker/docker/pull/32284&quot;&gt;#32284&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Move &lt;code&gt;docker service logs&lt;/code&gt; out of experimental &lt;a href=&quot;https://github.com/docker/docker/pull/32462&quot;&gt;#32462&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for Credential Spec and SELinux to services to the API &lt;a href=&quot;https://github.com/docker/docker/pull/32339&quot;&gt;#32339&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--entrypoint&lt;/code&gt; flag to &lt;code&gt;docker service create&lt;/code&gt; and &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29228&quot;&gt;#29228&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--network-add&lt;/code&gt; and &lt;code&gt;--network-rm&lt;/code&gt; to &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32062&quot;&gt;#32062&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--credential-spec&lt;/code&gt; flag to &lt;code&gt;docker service create&lt;/code&gt; and &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32339&quot;&gt;#32339&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter mode=&amp;lt;global|replicated&amp;gt;&lt;/code&gt; to &lt;code&gt;docker service ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31538&quot;&gt;#31538&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resolve network IDs on the client side, instead of in the daemon when creating services &lt;a href=&quot;https://github.com/docker/docker/pull/32062&quot;&gt;#32062&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--format&lt;/code&gt; option to &lt;code&gt;docker node ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30424&quot;&gt;#30424&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--prune&lt;/code&gt; option to &lt;code&gt;docker stack deploy&lt;/code&gt; to remove services that are no longer defined in the docker-compose file &lt;a href=&quot;https://github.com/docker/docker/pull/31302&quot;&gt;#31302&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;PORTS&lt;/code&gt; column for &lt;code&gt;docker service ls&lt;/code&gt; when using &lt;code&gt;ingress&lt;/code&gt; mode &lt;a href=&quot;https://github.com/docker/docker/pull/30813&quot;&gt;#30813&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix unnescessary re-deploying of tasks when environment-variables are used &lt;a href=&quot;https://github.com/docker/docker/pull/32364&quot;&gt;#32364&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker stack deploy&lt;/code&gt; not supporting &lt;code&gt;endpoint_mode&lt;/code&gt; when deploying from a docker compose file  &lt;a href=&quot;https://github.com/docker/docker/pull/32333&quot;&gt;#32333&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Proceed with startup if cluster component cannot be created to allow recovering from a broken swarm setup &lt;a href=&quot;https://github.com/docker/docker/pull/31631&quot;&gt;#31631&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow setting SELinux type or MCS labels when using &lt;code&gt;--ipc=container:&lt;/code&gt; or &lt;code&gt;--ipc=host&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30652&quot;&gt;#30652&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Deprecation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Deprecate &lt;code&gt;--api-enable-cors&lt;/code&gt; daemon flag. This flag was marked deprecated in Docker 1.6.0 but not listed in deprecated features &lt;a href=&quot;https://github.com/docker/docker/pull/32352&quot;&gt;#32352&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove Ubuntu 12.04 (Precise Pangolin) as supported platform. Ubuntu 12.04 is EOL, and no longer receives updates &lt;a href=&quot;https://github.com/docker/docker/pull/32520&quot;&gt;#32520&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Downloads&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;deb/rpm install&lt;/strong&gt;: &lt;code&gt;curl -fsSL https://get.docker.com/ | sh&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Linux 64bits tgz&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Linux/x86_64/docker-17.05.0-ce.tgz&quot;&gt;https://get.docker.com/builds/Linux/x86_64/docker-17.05.0-ce.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Darwin/OSX 64bits client tgz&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Darwin/x86_64/docker-17.05.0-ce.tgz&quot;&gt;https://get.docker.com/builds/Darwin/x86_64/docker-17.05.0-ce.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Linux 32bits arm tgz&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Linux/armel/docker-17.05.0-ce.tgz&quot;&gt;https://get.docker.com/builds/Linux/armel/docker-17.05.0-ce.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 64bits zip&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Windows/x86_64/docker-17.05.0-ce.zip&quot;&gt;https://get.docker.com/builds/Windows/x86_64/docker-17.05.0-ce.zip&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 32bits client zip&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Windows/i386/docker-17.05.0-ce.zip&quot;&gt;https://get.docker.com/builds/Windows/i386/docker-17.05.0-ce.zip&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note: those packages won&#39;t be updated for the next releases. &lt;a href=&quot;https://store.docker.com/search?type=edition&amp;amp;offering=community&quot;&gt;Get Docker CE from Docker Store&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content>
+    <author>
+      <name>vieux</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1032519?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/7691631/v17.05.0-ce-rc3</id>
+    <updated>2017-05-03T04:24:21+03:00</updated>
+    <link rel="alternate" type="text/html" href="/moby/moby/releases/tag/v17.05.0-ce-rc3"/>
+    <title>v17.05.0-ce-rc3</title>
+    <content type="html">&lt;h1&gt;Changelog&lt;/h1&gt;
+&lt;p&gt;Items starting with &lt;code&gt;DEPRECATE&lt;/code&gt; are important deprecation notices. For more&lt;br&gt;
+information on the list of deprecated flags and APIs please have a look at&lt;br&gt;
+&lt;a href=&quot;https://docs.docker.com/engine/deprecated/&quot;&gt;https://docs.docker.com/engine/deprecated/&lt;/a&gt; where target removal dates can also&lt;br&gt;
+be found.&lt;/p&gt;
+&lt;h2&gt;17.05.0-ce (2017-05-03)&lt;/h2&gt;
+&lt;h3&gt;Builder&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add multi-stage build support &lt;a href=&quot;https://github.com/docker/docker/pull/31257&quot;&gt;#31257&lt;/a&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32063&quot;&gt;#32063&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Allow using build-time args (&lt;code&gt;ARG&lt;/code&gt;) in &lt;code&gt;FROM&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31352&quot;&gt;#31352&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add an option for specifying build target &lt;a href=&quot;https://github.com/docker/docker/pull/32496&quot;&gt;#32496&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Accept &lt;code&gt;-f -&lt;/code&gt; to read Dockerfile from &lt;code&gt;stdin&lt;/code&gt;, but use local context for building &lt;a href=&quot;https://github.com/docker/docker/pull/31236&quot;&gt;#31236&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The values of default build time arguments (e.g &lt;code&gt;HTTP_PROXY&lt;/code&gt;) are no longer displayed in docker image history unless a corresponding &lt;code&gt;ARG&lt;/code&gt; instruction is written in the Dockerfile. &lt;a href=&quot;https://github.com/docker/docker/pull/31584&quot;&gt;#31584&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix setting command if a custom shell is used in a parent image &lt;a href=&quot;https://github.com/docker/docker/pull/32236&quot;&gt;#32236&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker build --label&lt;/code&gt; when the label includes single quotes and a space &lt;a href=&quot;https://github.com/docker/docker/pull/31750&quot;&gt;#31750&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Client&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--mount&lt;/code&gt; flag to &lt;code&gt;docker run&lt;/code&gt; and &lt;code&gt;docker create&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32251&quot;&gt;#32251&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--type=secret&lt;/code&gt; to &lt;code&gt;docker inspect&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32124&quot;&gt;#32124&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--format&lt;/code&gt; option to &lt;code&gt;docker secret ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31552&quot;&gt;#31552&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter&lt;/code&gt; option to &lt;code&gt;docker secret ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30810&quot;&gt;#30810&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter scope=&amp;lt;swarm|local&amp;gt;&lt;/code&gt; to &lt;code&gt;docker network ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31529&quot;&gt;#31529&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--cpus&lt;/code&gt; support to &lt;code&gt;docker update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31148&quot;&gt;#31148&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add label filter to &lt;code&gt;docker system prune&lt;/code&gt; and other &lt;code&gt;prune&lt;/code&gt; commands &lt;a href=&quot;https://github.com/docker/docker/pull/30740&quot;&gt;#30740&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker stack rm&lt;/code&gt; now accepts multiple stacks as input &lt;a href=&quot;https://github.com/docker/docker/pull/32110&quot;&gt;#32110&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve &lt;code&gt;docker version --format&lt;/code&gt; option when the client has downgraded the API version &lt;a href=&quot;https://github.com/docker/docker/pull/31022&quot;&gt;#31022&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prompt when using an encrypted client certificate to connect to a docker daemon &lt;a href=&quot;https://github.com/docker/docker/pull/31364&quot;&gt;#31364&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Display created tags on successful &lt;code&gt;docker build&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32077&quot;&gt;#32077&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cleanup compose convert error messages &lt;a href=&quot;https://github.com/moby/moby/pull/32087&quot;&gt;#32087&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Contrib&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for building docker debs for Ubuntu 17.04 Zesty on amd64 &lt;a href=&quot;https://github.com/docker/docker/pull/32435&quot;&gt;#32435&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Daemon&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix &lt;code&gt;--api-cors-header&lt;/code&gt; being ignored if &lt;code&gt;--api-enable-cors&lt;/code&gt; is not set &lt;a href=&quot;https://github.com/docker/docker/pull/32174&quot;&gt;#32174&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cleanup docker tmp dir on start &lt;a href=&quot;https://github.com/docker/docker/pull/31741&quot;&gt;#31741&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Deprecate &lt;code&gt;--graph&lt;/code&gt; flag in favor or &lt;code&gt;--data-root&lt;/code&gt;  &lt;a href=&quot;https://github.com/docker/docker/pull/28696&quot;&gt;#28696&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Logging&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for logging driver plugins &lt;a href=&quot;https://github.com/docker/docker/pull/28403&quot;&gt;#28403&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for showing logs of individual tasks to &lt;code&gt;docker service logs&lt;/code&gt;, and add &lt;code&gt;/task/{id}/logs&lt;/code&gt; REST endpoint &lt;a href=&quot;https://github.com/docker/docker/pull/32015&quot;&gt;#32015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--log-opt env-regex&lt;/code&gt; option to match environment variables using a regular expression &lt;a href=&quot;https://github.com/docker/docker/pull/27565&quot;&gt;#27565&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Networking&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow user to replace, and customize the ingress network &lt;a href=&quot;https://github.com/docker/docker/pull/31714&quot;&gt;#31714&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix UDP traffic in containers not working after the container is restarted &lt;a href=&quot;https://github.com/docker/docker/pull/32505&quot;&gt;#32505&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix files being written to &lt;code&gt;/var/lib/docker&lt;/code&gt; if a different data-root is set &lt;a href=&quot;https://github.com/docker/docker/pull/32505&quot;&gt;#32505&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Runtime&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure health probe is stopped when a container exits &lt;a href=&quot;https://github.com/docker/docker/pull/32274&quot;&gt;#32274&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Swarm Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add update/rollback order for services (&lt;code&gt;--update-order&lt;/code&gt; / &lt;code&gt;--rollback-order&lt;/code&gt;) &lt;a href=&quot;https://github.com/docker/docker/pull/30261&quot;&gt;#30261&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for synchronous &lt;code&gt;service create&lt;/code&gt; and &lt;code&gt;service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31144&quot;&gt;#31144&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for &quot;grace periods&quot; on healthchecks through the &lt;code&gt;HEALTHCHECK --start-period&lt;/code&gt; and &lt;code&gt;--health-start-period&lt;/code&gt; flag to&lt;br&gt;
+&lt;code&gt;docker service create&lt;/code&gt;, &lt;code&gt;docker service update&lt;/code&gt;, &lt;code&gt;docker create&lt;/code&gt;, and &lt;code&gt;docker run&lt;/code&gt; to support containers with an initial startup&lt;br&gt;
+time &lt;a href=&quot;https://github.com/docker/docker/pull/28938&quot;&gt;#28938&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;docker service create&lt;/code&gt; now omits fields that are not specified by the user, when possible. This will allow defaults to be applied inside the manager &lt;a href=&quot;https://github.com/docker/docker/pull/32284&quot;&gt;#32284&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker service inspect&lt;/code&gt; now shows default values for fields that are not specified by the user &lt;a href=&quot;https://github.com/docker/docker/pull/32284&quot;&gt;#32284&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Move &lt;code&gt;docker service logs&lt;/code&gt; out of experimental &lt;a href=&quot;https://github.com/docker/docker/pull/32462&quot;&gt;#32462&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for Credential Spec and SELinux to services to the API &lt;a href=&quot;https://github.com/docker/docker/pull/32339&quot;&gt;#32339&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--entrypoint&lt;/code&gt; flag to &lt;code&gt;docker service create&lt;/code&gt; and &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29228&quot;&gt;#29228&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--network-add&lt;/code&gt; and &lt;code&gt;--network-rm&lt;/code&gt; to &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32062&quot;&gt;#32062&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--credential-spec&lt;/code&gt; flag to &lt;code&gt;docker service create&lt;/code&gt; and &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32339&quot;&gt;#32339&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter mode=&amp;lt;global|replicated&amp;gt;&lt;/code&gt; to &lt;code&gt;docker service ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31538&quot;&gt;#31538&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resolve network IDs on the client side, instead of in the daemon when creating services &lt;a href=&quot;https://github.com/docker/docker/pull/32062&quot;&gt;#32062&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--format&lt;/code&gt; option to &lt;code&gt;docker node ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30424&quot;&gt;#30424&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--prune&lt;/code&gt; option to &lt;code&gt;docker stack deploy&lt;/code&gt; to remove services that are no longer defined in the docker-compose file &lt;a href=&quot;https://github.com/docker/docker/pull/31302&quot;&gt;#31302&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;PORTS&lt;/code&gt; column for &lt;code&gt;docker service ls&lt;/code&gt; when using &lt;code&gt;ingress&lt;/code&gt; mode &lt;a href=&quot;https://github.com/docker/docker/pull/30813&quot;&gt;#30813&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix unnescessary re-deploying of tasks when environment-variables are used &lt;a href=&quot;https://github.com/docker/docker/pull/32364&quot;&gt;#32364&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker stack deploy&lt;/code&gt; not supporting &lt;code&gt;endpoint_mode&lt;/code&gt; when deploying from a docker compose file  &lt;a href=&quot;https://github.com/docker/docker/pull/32333&quot;&gt;#32333&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Proceed with startup if cluster component cannot be created to allow recovering from a broken swarm setup &lt;a href=&quot;https://github.com/docker/docker/pull/31631&quot;&gt;#31631&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow setting SELinux type or MCS labels when using &lt;code&gt;--ipc=container:&lt;/code&gt; or &lt;code&gt;--ipc=host&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30652&quot;&gt;#30652&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Deprecation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Deprecate &lt;code&gt;--api-enable-cors&lt;/code&gt; daemon flag. This flag was marked deprecated in Docker 1.6.0 but not listed in deprecated features &lt;a href=&quot;https://github.com/docker/docker/pull/32352&quot;&gt;#32352&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove Ubuntu 12.04 (Precise Pangolin) as supported platform. Ubuntu 12.04 is EOL, and no longer receives updates &lt;a href=&quot;https://github.com/docker/docker/pull/32520&quot;&gt;#32520&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Downloads&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;deb/rpm install&lt;/strong&gt;: &lt;code&gt;curl -fsSL https://test.docker.com/ | sh&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Linux 64bits tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Linux/x86_64/docker-17.05.0-ce-rc3.tgz&quot;&gt;https://test.docker.com/builds/Linux/x86_64/docker-17.05.0-ce-rc3.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Darwin/OSX 64bits client tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Darwin/x86_64/docker-17.05.0-ce-rc3.tgz&quot;&gt;https://test.docker.com/builds/Darwin/x86_64/docker-17.05.0-ce-rc3.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Linux 32bits arm tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Linux/armel/docker-17.05.0-ce-rc3.tgz&quot;&gt;https://test.docker.com/builds/Linux/armel/docker-17.05.0-ce-rc3.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 64bits zip&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Windows/x86_64/docker-17.05.0-ce-rc3.zip&quot;&gt;https://test.docker.com/builds/Windows/x86_64/docker-17.05.0-ce-rc3.zip&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 32bits client zip&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Windows/i386/docker-17.05.0-ce-rc3.zip&quot;&gt;https://test.docker.com/builds/Windows/i386/docker-17.05.0-ce-rc3.zip&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+    <author>
+      <name>vieux</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1032519?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/7691631/v17.05.0-ce-rc2</id>
+    <updated>2017-04-28T02:20:40+03:00</updated>
+    <link rel="alternate" type="text/html" href="/moby/moby/releases/tag/v17.05.0-ce-rc2"/>
+    <title>v17.05.0-ce-rc2</title>
+    <content type="html">&lt;h1&gt;Changelog&lt;/h1&gt;
+&lt;p&gt;Items starting with &lt;code&gt;DEPRECATE&lt;/code&gt; are important deprecation notices. For more&lt;br&gt;
+information on the list of deprecated flags and APIs please have a look at&lt;br&gt;
+&lt;a href=&quot;https://docs.docker.com/engine/deprecated/&quot;&gt;https://docs.docker.com/engine/deprecated/&lt;/a&gt; where target removal dates can also&lt;br&gt;
+be found.&lt;/p&gt;
+&lt;h2&gt;17.05.0-ce (2017-05-03)&lt;/h2&gt;
+&lt;h3&gt;Builder&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add multi-stage build support &lt;a href=&quot;https://github.com/docker/docker/pull/31257&quot;&gt;#31257&lt;/a&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32063&quot;&gt;#32063&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Allow using build-time args (&lt;code&gt;ARG&lt;/code&gt;) in &lt;code&gt;FROM&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31352&quot;&gt;#31352&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add an option for specifying build target &lt;a href=&quot;https://github.com/docker/docker/pull/32496&quot;&gt;#32496&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Accept &lt;code&gt;-f -&lt;/code&gt; to read Dockerfile from &lt;code&gt;stdin&lt;/code&gt;, but use local context for building &lt;a href=&quot;https://github.com/docker/docker/pull/31236&quot;&gt;#31236&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The values of default build time arguments (e.g &lt;code&gt;HTTP_PROXY&lt;/code&gt;) are no longer displayed in docker image history unless a corresponding &lt;code&gt;ARG&lt;/code&gt; instruction is written in the Dockerfile. &lt;a href=&quot;https://github.com/docker/docker/pull/31584&quot;&gt;#31584&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix setting command if a custom shell is used in a parent image &lt;a href=&quot;https://github.com/docker/docker/pull/32236&quot;&gt;#32236&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker build --label&lt;/code&gt; when the label includes single quotes and a space &lt;a href=&quot;https://github.com/docker/docker/pull/31750&quot;&gt;#31750&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Client&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--mount&lt;/code&gt; flag to &lt;code&gt;docker run&lt;/code&gt; and &lt;code&gt;docker create&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32251&quot;&gt;#32251&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--type=secret&lt;/code&gt; to &lt;code&gt;docker inspect&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32124&quot;&gt;#32124&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--format&lt;/code&gt; option to &lt;code&gt;docker secret ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31552&quot;&gt;#31552&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter&lt;/code&gt; option to &lt;code&gt;docker secret ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30810&quot;&gt;#30810&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter scope=&amp;lt;swarm|local&amp;gt;&lt;/code&gt; to &lt;code&gt;docker network ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31529&quot;&gt;#31529&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--cpus&lt;/code&gt; support to &lt;code&gt;docker update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31148&quot;&gt;#31148&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add label filter to &lt;code&gt;docker system prune&lt;/code&gt; and other &lt;code&gt;prune&lt;/code&gt; commands &lt;a href=&quot;https://github.com/docker/docker/pull/30740&quot;&gt;#30740&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker stack rm&lt;/code&gt; now accepts multiple stacks as input &lt;a href=&quot;https://github.com/docker/docker/pull/32110&quot;&gt;#32110&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve &lt;code&gt;docker version --format&lt;/code&gt; option when the client has downgraded the API version &lt;a href=&quot;https://github.com/docker/docker/pull/31022&quot;&gt;#31022&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prompt when using an encrypted client certificate to connect to a docker daemon &lt;a href=&quot;https://github.com/docker/docker/pull/31364&quot;&gt;#31364&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Display created tags on successful &lt;code&gt;docker build&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32077&quot;&gt;#32077&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cleanup compose convert error messages &lt;a href=&quot;https://github.com/moby/moby/pull/32087&quot;&gt;#32087&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Contrib&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for building docker debs for Ubuntu 17.04 Zesty on amd64 &lt;a href=&quot;https://github.com/docker/docker/pull/32435&quot;&gt;#32435&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Daemon&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix &lt;code&gt;--api-cors-header&lt;/code&gt; being ignored if &lt;code&gt;--api-enable-cors&lt;/code&gt; is not set &lt;a href=&quot;https://github.com/docker/docker/pull/32174&quot;&gt;#32174&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cleanup docker tmp dir on start &lt;a href=&quot;https://github.com/docker/docker/pull/31741&quot;&gt;#31741&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Deprecate &lt;code&gt;--graph&lt;/code&gt; flag in favor or &lt;code&gt;--data-root&lt;/code&gt;  &lt;a href=&quot;https://github.com/docker/docker/pull/28696&quot;&gt;#28696&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Logging&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for logging driver plugins &lt;a href=&quot;https://github.com/docker/docker/pull/28403&quot;&gt;#28403&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for showing logs of individual tasks to &lt;code&gt;docker service logs&lt;/code&gt;, and add &lt;code&gt;/task/{id}/logs&lt;/code&gt; REST endpoint &lt;a href=&quot;https://github.com/docker/docker/pull/32015&quot;&gt;#32015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--log-opt env-regex&lt;/code&gt; option to match environment variables using a regular expression &lt;a href=&quot;https://github.com/docker/docker/pull/27565&quot;&gt;#27565&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Networking&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow user to replace, and customize the ingress network &lt;a href=&quot;https://github.com/docker/docker/pull/31714&quot;&gt;#31714&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix UDP traffic in containers not working after the container is restarted &lt;a href=&quot;https://github.com/docker/docker/pull/32505&quot;&gt;#32505&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix files being written to &lt;code&gt;/var/lib/docker&lt;/code&gt; if a different data-root is set &lt;a href=&quot;https://github.com/docker/docker/pull/32505&quot;&gt;#32505&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Runtime&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure health probe is stopped when a container exits &lt;a href=&quot;https://github.com/docker/docker/pull/32274&quot;&gt;#32274&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Swarm Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add update/rollback order for services (&lt;code&gt;--update-order&lt;/code&gt; / &lt;code&gt;--rollback-order&lt;/code&gt;) &lt;a href=&quot;https://github.com/docker/docker/pull/30261&quot;&gt;#30261&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for synchronous &lt;code&gt;service create&lt;/code&gt; and &lt;code&gt;service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31144&quot;&gt;#31144&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for &quot;grace periods&quot; on healthchecks through the &lt;code&gt;HEALTHCHECK --start-period&lt;/code&gt; and &lt;code&gt;--health-start-period&lt;/code&gt; flag to&lt;br&gt;
+&lt;code&gt;docker service create&lt;/code&gt;, &lt;code&gt;docker service update&lt;/code&gt;, &lt;code&gt;docker create&lt;/code&gt;, and &lt;code&gt;docker run&lt;/code&gt; to support containers with an initial startup&lt;br&gt;
+time &lt;a href=&quot;https://github.com/docker/docker/pull/28938&quot;&gt;#28938&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;docker service create&lt;/code&gt; now omits fields that are not specified by the user, when possible. This will allow defaults to be applied inside the manager &lt;a href=&quot;https://github.com/docker/docker/pull/32284&quot;&gt;#32284&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker service inspect&lt;/code&gt; now shows default values for fields that are not specified by the user &lt;a href=&quot;https://github.com/docker/docker/pull/32284&quot;&gt;#32284&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Move &lt;code&gt;docker service logs&lt;/code&gt; out of experimental &lt;a href=&quot;https://github.com/docker/docker/pull/32462&quot;&gt;#32462&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for Credential Spec and SELinux to services to the API &lt;a href=&quot;https://github.com/docker/docker/pull/32339&quot;&gt;#32339&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--entrypoint&lt;/code&gt; flag to &lt;code&gt;docker service create&lt;/code&gt; and &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29228&quot;&gt;#29228&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--network-add&lt;/code&gt; and &lt;code&gt;--network-rm&lt;/code&gt; to &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32062&quot;&gt;#32062&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--credential-spec&lt;/code&gt; flag to &lt;code&gt;docker service create&lt;/code&gt; and &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32339&quot;&gt;#32339&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter mode=&amp;lt;global|replicated&amp;gt;&lt;/code&gt; to &lt;code&gt;docker service ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31538&quot;&gt;#31538&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resolve network IDs on the client side, instead of in the daemon when creating services &lt;a href=&quot;https://github.com/docker/docker/pull/32062&quot;&gt;#32062&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--format&lt;/code&gt; option to &lt;code&gt;docker node ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30424&quot;&gt;#30424&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--prune&lt;/code&gt; option to &lt;code&gt;docker stack deploy&lt;/code&gt; to remove services that are no longer defined in the docker-compose file &lt;a href=&quot;https://github.com/docker/docker/pull/31302&quot;&gt;#31302&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;PORTS&lt;/code&gt; column for &lt;code&gt;docker service ls&lt;/code&gt; when using &lt;code&gt;ingress&lt;/code&gt; mode &lt;a href=&quot;https://github.com/docker/docker/pull/30813&quot;&gt;#30813&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix unnescessary re-deploying of tasks when environment-variables are used &lt;a href=&quot;https://github.com/docker/docker/pull/32364&quot;&gt;#32364&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker stack deploy&lt;/code&gt; not supporting &lt;code&gt;endpoint_mode&lt;/code&gt; when deploying from a docker compose file  &lt;a href=&quot;https://github.com/docker/docker/pull/32333&quot;&gt;#32333&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Proceed with startup if cluster component cannot be created to allow recovering from a broken swarm setup &lt;a href=&quot;https://github.com/docker/docker/pull/31631&quot;&gt;#31631&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow setting SELinux type or MCS labels when using &lt;code&gt;--ipc=container:&lt;/code&gt; or &lt;code&gt;--ipc=host&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30652&quot;&gt;#30652&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Deprecation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Deprecate &lt;code&gt;--api-enable-cors&lt;/code&gt; daemon flag. This flag was marked deprecated in Docker 1.6.0 but not listed in deprecated features &lt;a href=&quot;https://github.com/docker/docker/pull/32352&quot;&gt;#32352&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove Ubuntu 12.04 (Precise Pangolin) as supported platform. Ubuntu 12.04 is EOL, and no longer receives updates &lt;a href=&quot;https://github.com/docker/docker/pull/32520&quot;&gt;#32520&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Downloads&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;deb/rpm install&lt;/strong&gt;: &lt;code&gt;curl -fsSL https://test.docker.com/ | sh&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Linux 64bits tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Linux/x86_64/docker-17.05.0-ce-rc2.tgz&quot;&gt;https://test.docker.com/builds/Linux/x86_64/docker-17.05.0-ce-rc2.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Darwin/OSX 64bits client tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Darwin/x86_64/docker-17.05.0-ce-rc2.tgz&quot;&gt;https://test.docker.com/builds/Darwin/x86_64/docker-17.05.0-ce-rc2.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Linux 32bits arm tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Linux/armel/docker-17.05.0-ce-rc2.tgz&quot;&gt;https://test.docker.com/builds/Linux/armel/docker-17.05.0-ce-rc2.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 64bits zip&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Windows/x86_64/docker-17.05.0-ce-rc2.zip&quot;&gt;https://test.docker.com/builds/Windows/x86_64/docker-17.05.0-ce-rc2.zip&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 32bits client zip&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Windows/i386/docker-17.05.0-ce-rc2.zip&quot;&gt;https://test.docker.com/builds/Windows/i386/docker-17.05.0-ce-rc2.zip&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+    <author>
+      <name>vieux</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1032519?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/7691631/v17.05.0-ce-rc1</id>
+    <updated>2017-04-13T01:46:50+03:00</updated>
+    <link rel="alternate" type="text/html" href="/moby/moby/releases/tag/v17.05.0-ce-rc1"/>
+    <title>v17.05.0-ce-rc1</title>
+    <content type="html">&lt;h1&gt;Changelog&lt;/h1&gt;
+&lt;p&gt;Items starting with &lt;code&gt;DEPRECATE&lt;/code&gt; are important deprecation notices. For more&lt;br&gt;
+information on the list of deprecated flags and APIs please have a look at&lt;br&gt;
+&lt;a href=&quot;https://docs.docker.com/engine/deprecated/&quot;&gt;https://docs.docker.com/engine/deprecated/&lt;/a&gt; where target removal dates can also&lt;br&gt;
+be found.&lt;/p&gt;
+&lt;h2&gt;17.05.0-ce (2017-05-03)&lt;/h2&gt;
+&lt;h3&gt;Builder&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add multi-stage build support &lt;a href=&quot;https://github.com/docker/docker/pull/31257&quot;&gt;#31257&lt;/a&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32063&quot;&gt;#32063&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Allow using build-time args (&lt;code&gt;ARG&lt;/code&gt;) in &lt;code&gt;FROM&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31352&quot;&gt;#31352&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add an option for specifying build target &lt;a href=&quot;https://github.com/docker/docker/pull/32496&quot;&gt;#32496&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Accept &lt;code&gt;-f -&lt;/code&gt; to read Dockerfile from &lt;code&gt;stdin&lt;/code&gt;, but use local context for building &lt;a href=&quot;https://github.com/docker/docker/pull/31236&quot;&gt;#31236&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The values of default build time arguments (e.g &lt;code&gt;HTTP_PROXY&lt;/code&gt;) are no longer displayed in docker image history unless a corresponding &lt;code&gt;ARG&lt;/code&gt; instruction is written in the Dockerfile. &lt;a href=&quot;https://github.com/docker/docker/pull/31584&quot;&gt;#31584&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix setting command if a custom shell is used in a parent image &lt;a href=&quot;https://github.com/docker/docker/pull/32236&quot;&gt;#32236&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker build --label&lt;/code&gt; when the label includes single quotes and a space &lt;a href=&quot;https://github.com/docker/docker/pull/31750&quot;&gt;#31750&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Client&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--mount&lt;/code&gt; flag to &lt;code&gt;docker run&lt;/code&gt; and &lt;code&gt;docker create&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32251&quot;&gt;#32251&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--type=secret&lt;/code&gt; to &lt;code&gt;docker inspect&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32124&quot;&gt;#32124&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--format&lt;/code&gt; option to &lt;code&gt;docker secret ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31552&quot;&gt;#31552&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter&lt;/code&gt; option to &lt;code&gt;docker secret ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30810&quot;&gt;#30810&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter scope=&amp;lt;swarm|local&amp;gt;&lt;/code&gt; to &lt;code&gt;docker network ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31529&quot;&gt;#31529&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--cpus&lt;/code&gt; support to &lt;code&gt;docker update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31148&quot;&gt;#31148&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add label filter to &lt;code&gt;docker system prune&lt;/code&gt; and other &lt;code&gt;prune&lt;/code&gt; commands &lt;a href=&quot;https://github.com/docker/docker/pull/30740&quot;&gt;#30740&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker stack rm&lt;/code&gt; now accepts multiple stacks as input &lt;a href=&quot;https://github.com/docker/docker/pull/32110&quot;&gt;#32110&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve &lt;code&gt;docker version --format&lt;/code&gt; option when the client has downgraded the API version &lt;a href=&quot;https://github.com/docker/docker/pull/31022&quot;&gt;#31022&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prompt when using an encrypted client certificate to connect to a docker daemon &lt;a href=&quot;https://github.com/docker/docker/pull/31364&quot;&gt;#31364&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Display created tags on successful &lt;code&gt;docker build&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32077&quot;&gt;#32077&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Contrib&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for building docker debs for Ubuntu 17.04 Zesty on amd64 &lt;a href=&quot;https://github.com/docker/docker/pull/32435&quot;&gt;#32435&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Daemon&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix &lt;code&gt;--api-cors-header&lt;/code&gt; being ignored if &lt;code&gt;--api-enable-cors&lt;/code&gt; is not set &lt;a href=&quot;https://github.com/docker/docker/pull/32174&quot;&gt;#32174&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cleanup docker tmp dir on start &lt;a href=&quot;https://github.com/docker/docker/pull/31741&quot;&gt;#31741&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Deprecate &lt;code&gt;--graph&lt;/code&gt; flag in favor or &lt;code&gt;--data-root&lt;/code&gt;  &lt;a href=&quot;https://github.com/docker/docker/pull/28696&quot;&gt;#28696&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Logging&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for logging driver plugins &lt;a href=&quot;https://github.com/docker/docker/pull/28403&quot;&gt;#28403&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for showing logs of individual tasks to &lt;code&gt;docker service logs&lt;/code&gt;, and add &lt;code&gt;/task/{id}/logs&lt;/code&gt; REST endpoint &lt;a href=&quot;https://github.com/docker/docker/pull/32015&quot;&gt;#32015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--log-opt env-regex&lt;/code&gt; option to match environment variables using a regular expression &lt;a href=&quot;https://github.com/docker/docker/pull/27565&quot;&gt;#27565&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Networking&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow user to replace, and customize the ingress network &lt;a href=&quot;https://github.com/docker/docker/pull/31714&quot;&gt;#31714&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix UDP traffic in containers not working after the container is restarted &lt;a href=&quot;https://github.com/docker/docker/pull/32505&quot;&gt;#32505&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix files being written to &lt;code&gt;/var/lib/docker&lt;/code&gt; if a different data-root is set &lt;a href=&quot;https://github.com/docker/docker/pull/32505&quot;&gt;#32505&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Runtime&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure health probe is stopped when a container exits &lt;a href=&quot;https://github.com/docker/docker/pull/32274&quot;&gt;#32274&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Swarm Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add update/rollback order for services (&lt;code&gt;--update-order&lt;/code&gt; / &lt;code&gt;--rollback-order&lt;/code&gt;) &lt;a href=&quot;https://github.com/docker/docker/pull/30261&quot;&gt;#30261&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for synchronous &lt;code&gt;service create&lt;/code&gt; and &lt;code&gt;service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31144&quot;&gt;#31144&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for &quot;grace periods&quot; on healthchecks through the &lt;code&gt;HEALTHCHECK --start-period&lt;/code&gt; and &lt;code&gt;--health-start-period&lt;/code&gt; flag to&lt;br&gt;
+&lt;code&gt;docker service create&lt;/code&gt;, &lt;code&gt;docker service update&lt;/code&gt;, &lt;code&gt;docker create&lt;/code&gt;, and &lt;code&gt;docker run&lt;/code&gt; to support containers with an initial startup&lt;br&gt;
+time &lt;a href=&quot;https://github.com/docker/docker/pull/28938&quot;&gt;#28938&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;docker service create&lt;/code&gt; now omits fields that are not specified by the user, when possible. This will allow defaults to be applied inside the manager &lt;a href=&quot;https://github.com/docker/docker/pull/32284&quot;&gt;#32284&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker service inspect&lt;/code&gt; now shows default values for fields that are not specified by the user &lt;a href=&quot;https://github.com/docker/docker/pull/32284&quot;&gt;#32284&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Move &lt;code&gt;docker service logs&lt;/code&gt; out of experimental &lt;a href=&quot;https://github.com/docker/docker/pull/32462&quot;&gt;#32462&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add support for Credential Spec and SELinux to services to the API &lt;a href=&quot;https://github.com/docker/docker/pull/32339&quot;&gt;#32339&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--entrypoint&lt;/code&gt; flag to &lt;code&gt;docker service create&lt;/code&gt; and &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29228&quot;&gt;#29228&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--network-add&lt;/code&gt; and &lt;code&gt;--network-rm&lt;/code&gt; to &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32062&quot;&gt;#32062&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--credential-spec&lt;/code&gt; flag to &lt;code&gt;docker service create&lt;/code&gt; and &lt;code&gt;docker service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/32339&quot;&gt;#32339&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--filter mode=&amp;lt;global|replicated&amp;gt;&lt;/code&gt; to &lt;code&gt;docker service ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31538&quot;&gt;#31538&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resolve network IDs on the client side, instead of in the daemon when creating services &lt;a href=&quot;https://github.com/docker/docker/pull/32062&quot;&gt;#32062&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--format&lt;/code&gt; option to &lt;code&gt;docker node ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30424&quot;&gt;#30424&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--prune&lt;/code&gt; option to &lt;code&gt;docker stack deploy&lt;/code&gt; to remove services that are no longer defined in the docker-compose file &lt;a href=&quot;https://github.com/docker/docker/pull/31302&quot;&gt;#31302&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;PORTS&lt;/code&gt; column for &lt;code&gt;docker service ls&lt;/code&gt; when using &lt;code&gt;ingress&lt;/code&gt; mode &lt;a href=&quot;https://github.com/docker/docker/pull/30813&quot;&gt;#30813&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix unnescessary re-deploying of tasks when environment-variables are used &lt;a href=&quot;https://github.com/docker/docker/pull/32364&quot;&gt;#32364&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker stack deploy&lt;/code&gt; not supporting &lt;code&gt;endpoint_mode&lt;/code&gt; when deploying from a docker compose file  &lt;a href=&quot;https://github.com/docker/docker/pull/32333&quot;&gt;#32333&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Proceed with startup if cluster component cannot be created to allow recovering from a broken swarm setup &lt;a href=&quot;https://github.com/docker/docker/pull/31631&quot;&gt;#31631&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow setting SELinux type or MCS labels when using &lt;code&gt;--ipc=container:&lt;/code&gt; or &lt;code&gt;--ipc=host&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30652&quot;&gt;#30652&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Deprecation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Deprecate &lt;code&gt;--api-enable-cors&lt;/code&gt; daemon flag. This flag was marked deprecated in Docker 1.6.0 but not listed in deprecated features &lt;a href=&quot;https://github.com/docker/docker/pull/32352&quot;&gt;#32352&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove Ubuntu 12.04 (Precise Pangolin) as supported platform. Ubuntu 12.04 is EOL, and no longer receives updates &lt;a href=&quot;https://github.com/docker/docker/pull/32520&quot;&gt;#32520&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Downloads&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;deb/rpm install&lt;/strong&gt;: &lt;code&gt;curl -fsSL https://test.docker.com/ | sh&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Linux 64bits tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Linux/x86_64/docker-17.05.0-ce-rc1.tgz&quot;&gt;https://test.docker.com/builds/Linux/x86_64/docker-17.05.0-ce-rc1.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Darwin/OSX 64bits client tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Darwin/x86_64/docker-17.05.0-ce-rc1.tgz&quot;&gt;https://test.docker.com/builds/Darwin/x86_64/docker-17.05.0-ce-rc1.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Linux 32bits arm tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Linux/armel/docker-17.05.0-ce-rc1.tgz&quot;&gt;https://test.docker.com/builds/Linux/armel/docker-17.05.0-ce-rc1.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 64bits zip&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Windows/x86_64/docker-17.05.0-ce-rc1.zip&quot;&gt;https://test.docker.com/builds/Windows/x86_64/docker-17.05.0-ce-rc1.zip&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 32bits client zip&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Windows/i386/docker-17.05.0-ce-rc1.zip&quot;&gt;https://test.docker.com/builds/Windows/i386/docker-17.05.0-ce-rc1.zip&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+    <author>
+      <name>vieux</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1032519?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/7691631/v17.04.0-ce</id>
+    <updated>2017-04-06T03:41:05+03:00</updated>
+    <link rel="alternate" type="text/html" href="/moby/moby/releases/tag/v17.04.0-ce"/>
+    <title>v17.04.0-ce</title>
+    <content type="html">&lt;h1&gt;Changelog&lt;/h1&gt;
+&lt;p&gt;Items starting with &lt;code&gt;DEPRECATE&lt;/code&gt; are important deprecation notices. For more&lt;br&gt;
+information on the list of deprecated flags and APIs please have a look at&lt;br&gt;
+&lt;a href=&quot;https://docs.docker.com/engine/deprecated/&quot;&gt;https://docs.docker.com/engine/deprecated/&lt;/a&gt; where target removal dates can also&lt;br&gt;
+be found.&lt;/p&gt;
+&lt;h2&gt;17.04.0-ce (2017-04-05)&lt;/h2&gt;
+&lt;h3&gt;Builder&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Disable container logging for build containers &lt;a href=&quot;https://github.com/docker/docker/pull/29552&quot;&gt;#29552&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix use of &lt;code&gt;**/&lt;/code&gt; in &lt;code&gt;.dockerignore&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29043&quot;&gt;#29043&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Client&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Sort &lt;code&gt;docker stack ls&lt;/code&gt; by name &lt;a href=&quot;https://github.com/docker/docker/pull/31085&quot;&gt;#31085&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Flags for specifying bind mount consistency &lt;a href=&quot;https://github.com/docker/docker/pull/31047&quot;&gt;#31047&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Output of docker CLI --help is now wrapped to the terminal width &lt;a href=&quot;https://github.com/docker/docker/pull/28751&quot;&gt;#28751&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Suppress image digest in docker ps &lt;a href=&quot;https://github.com/docker/docker/pull/30848&quot;&gt;#30848&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hide command options that are related to Windows &lt;a href=&quot;https://github.com/docker/docker/pull/30788&quot;&gt;#30788&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker plugin install&lt;/code&gt; prompt to accept &quot;enter&quot; for the &quot;N&quot; default &lt;a href=&quot;https://github.com/docker/docker/pull/30769&quot;&gt;#30769&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;truncate&lt;/code&gt; function for Go templates &lt;a href=&quot;https://github.com/docker/docker/pull/30484&quot;&gt;#30484&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Support expanded syntax of ports in &lt;code&gt;stack deploy&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30476&quot;&gt;#30476&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support expanded syntax of mounts in &lt;code&gt;stack deploy&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30597&quot;&gt;#30597&lt;/a&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31795&quot;&gt;#31795&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--add-host&lt;/code&gt; for docker build &lt;a href=&quot;https://github.com/docker/docker/pull/30383&quot;&gt;#30383&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;.CreatedAt&lt;/code&gt; placeholder for &lt;code&gt;docker network ls --format&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29900&quot;&gt;#29900&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Update order of &lt;code&gt;--secret-rm&lt;/code&gt; and &lt;code&gt;--secret-add&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29802&quot;&gt;#29802&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--filter enabled=true&lt;/code&gt; for &lt;code&gt;docker plugin ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/28627&quot;&gt;#28627&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--format&lt;/code&gt; to &lt;code&gt;docker service ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/28199&quot;&gt;#28199&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;publish&lt;/code&gt; and &lt;code&gt;expose&lt;/code&gt; filter for &lt;code&gt;docker ps --filter&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/27557&quot;&gt;#27557&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Support multiple service IDs on &lt;code&gt;docker service ps&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/25234&quot;&gt;#25234&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow swarm join with &lt;code&gt;--availability=drain&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/24993&quot;&gt;#24993&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker inspect now shows &quot;docker-default&quot; when AppArmor is enabled and no other profile was defined &lt;a href=&quot;https://github.com/docker/docker/pull/27083&quot;&gt;#27083&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Logging&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement optional ring buffer for container logs &lt;a href=&quot;https://github.com/docker/docker/pull/28762&quot;&gt;#28762&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--log-opt awslogs-create-group=&amp;lt;true|false&amp;gt;&lt;/code&gt; for awslogs (CloudWatch) to support creation of log groups as needed &lt;a href=&quot;https://github.com/docker/docker/pull/29504&quot;&gt;#29504&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix segfault when using the gcplogs logging driver with a &quot;static&quot; binary &lt;a href=&quot;https://github.com/docker/docker/pull/29478&quot;&gt;#29478&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Networking&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Check parameter &lt;code&gt;--ip&lt;/code&gt;, &lt;code&gt;--ip6&lt;/code&gt; and &lt;code&gt;--link-local-ip&lt;/code&gt; in &lt;code&gt;docker network connect&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30807&quot;&gt;#30807&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Added support for &lt;code&gt;dns-search&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30117&quot;&gt;#30117&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Added --verbose option for docker network inspect to show task details from all swarm nodes &lt;a href=&quot;https://github.com/docker/docker/pull/31710&quot;&gt;#31710&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Clear stale datapath encryption states when joining the cluster &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1354&quot;&gt;docker/libnetwork#1354&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure iptables initialization only happens once &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1676&quot;&gt;docker/libnetwork#1676&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix bad order of iptables filter rules &lt;a href=&quot;https://github.com/docker/libnetwork/pull/961&quot;&gt;docker/libnetwork#961&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add anonymous container alias to service record on attachable network &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1651&quot;&gt;docker/libnetwork#1651&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support for &lt;code&gt;com.docker.network.container_interface_prefix&lt;/code&gt; driver label &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1667&quot;&gt;docker/libnetwork#1667&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve network list performance by omitting network details that are not used &lt;a href=&quot;https://github.com/docker/docker/pull/30673&quot;&gt;#30673&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Runtime&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Handle paused container when restoring without live-restore set &lt;a href=&quot;https://github.com/docker/docker/pull/31704&quot;&gt;#31704&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not allow sub second in healthcheck options in Dockerfile &lt;a href=&quot;https://github.com/docker/docker/pull/31177&quot;&gt;#31177&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Support name and id prefix in  &lt;code&gt;secret update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30856&quot;&gt;#30856&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use binary frame for websocket attach endpoint &lt;a href=&quot;https://github.com/docker/docker/pull/30460&quot;&gt;#30460&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix linux mount calls not applying propagation type changes &lt;a href=&quot;https://github.com/docker/docker/pull/30416&quot;&gt;#30416&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix ExecIds leak on failed &lt;code&gt;exec -i&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30340&quot;&gt;#30340&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prune named but untagged images if &lt;code&gt;danglingOnly=true&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30330&quot;&gt;#30330&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add daemon flag to set &lt;code&gt;no_new_priv&lt;/code&gt; as default for unprivileged containers &lt;a href=&quot;https://github.com/docker/docker/pull/29984&quot;&gt;#29984&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add daemon option &lt;code&gt;--default-shm-size&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29692&quot;&gt;#29692&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support registry mirror config reload &lt;a href=&quot;https://github.com/docker/docker/pull/29650&quot;&gt;#29650&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Ignore the daemon log config when building images &lt;a href=&quot;https://github.com/docker/docker/pull/29552&quot;&gt;#29552&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Move secret name or ID prefix resolving from client to daemon &lt;a href=&quot;https://github.com/docker/docker/pull/29218&quot;&gt;#29218&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow adding rules to &lt;code&gt;cgroup devices.allow&lt;/code&gt; on container create/run &lt;a href=&quot;https://github.com/docker/docker/pull/22563&quot;&gt;#22563&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix &lt;code&gt;cpu.cfs_quota_us&lt;/code&gt; being reset when running &lt;code&gt;systemd daemon-reload&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31736&quot;&gt;#31736&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Swarm Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Topology-aware scheduling &lt;a href=&quot;https://github.com/docker/docker/pull/30725&quot;&gt;#30725&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Automatic service rollback on failure &lt;a href=&quot;https://github.com/docker/docker/pull/31108&quot;&gt;#31108&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Worker and manager on the same node are now connected through a UNIX socket &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1828&quot;&gt;docker/swarmkit#1828&lt;/a&gt;, &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1850&quot;&gt;docker/swarmkit#1850&lt;/a&gt;, &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1851&quot;&gt;docker/swarmkit#1851&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Improve raft transport package &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1748&quot;&gt;docker/swarmkit#1748&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;No automatic manager shutdown on demotion/removal &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1829&quot;&gt;docker/swarmkit#1829&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use TransferLeadership to make leader demotion safer &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1939&quot;&gt;docker/swarmkit#1939&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Decrease default monitoring period &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1967&quot;&gt;docker/swarmkit#1967&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Service logs formatting &lt;a href=&quot;https://github.com/docker/docker/pull/31672&quot;&gt;#31672&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix service logs API to be able to specify stream &lt;a href=&quot;https://github.com/docker/docker/pull/31313&quot;&gt;#31313&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--stop-signal&lt;/code&gt; for &lt;code&gt;service create&lt;/code&gt; and &lt;code&gt;service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30754&quot;&gt;#30754&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--read-only&lt;/code&gt; for &lt;code&gt;service create&lt;/code&gt; and &lt;code&gt;service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30162&quot;&gt;#30162&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Renew the context after communicating with the registry &lt;a href=&quot;https://github.com/docker/docker/pull/31586&quot;&gt;#31586&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(experimental) Add &lt;code&gt;--tail&lt;/code&gt; and &lt;code&gt;--since&lt;/code&gt; options to &lt;code&gt;docker service logs&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31500&quot;&gt;#31500&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(experimental) Add &lt;code&gt;--no-task-ids&lt;/code&gt; and &lt;code&gt;--no-trunc&lt;/code&gt; options to &lt;code&gt;docker service logs&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31672&quot;&gt;#31672&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Windows&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Block pulling Windows images on non-Windows daemons &lt;a href=&quot;https://github.com/docker/docker/pull/29001&quot;&gt;#29001&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Downloads&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;deb/rpm install&lt;/strong&gt;: &lt;code&gt;curl -fsSL https://get.docker.com/ | sh&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Linux 64bits tgz&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Linux/x86_64/docker-17.04.0-ce.tgz&quot;&gt;https://get.docker.com/builds/Linux/x86_64/docker-17.04.0-ce.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Darwin/OSX 64bits client tgz&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Darwin/x86_64/docker-17.04.0-ce.tgz&quot;&gt;https://get.docker.com/builds/Darwin/x86_64/docker-17.04.0-ce.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Linux 32bits arm tgz&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Linux/armel/docker-17.04.0-ce.tgz&quot;&gt;https://get.docker.com/builds/Linux/armel/docker-17.04.0-ce.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 64bits zip&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Windows/x86_64/docker-17.04.0-ce.zip&quot;&gt;https://get.docker.com/builds/Windows/x86_64/docker-17.04.0-ce.zip&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 32bits client zip&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Windows/i386/docker-17.04.0-ce.zip&quot;&gt;https://get.docker.com/builds/Windows/i386/docker-17.04.0-ce.zip&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+    <author>
+      <name>vieux</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1032519?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/7691631/v17.04.0-ce-rc2</id>
+    <updated>2017-04-13T01:41:05+03:00</updated>
+    <link rel="alternate" type="text/html" href="/moby/moby/releases/tag/v17.04.0-ce-rc2"/>
+    <title>v17.04.0-ce-rc2</title>
+    <content type="html">&lt;h2&gt;17.04.0-ce (2017-04-05)&lt;/h2&gt;
+&lt;h3&gt;Builder&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Disable container logging for build containers &lt;a href=&quot;https://github.com/docker/docker/pull/29552&quot;&gt;#29552&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix use of &lt;code&gt;**/&lt;/code&gt; in &lt;code&gt;.dockerignore&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29043&quot;&gt;#29043&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Client&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Sort &lt;code&gt;docker stack ls&lt;/code&gt; by name &lt;a href=&quot;https://github.com/docker/docker/pull/31085&quot;&gt;#31085&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Flags for specifying bind mount consistency &lt;a href=&quot;https://github.com/docker/docker/pull/31047&quot;&gt;#31047&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Output of docker CLI --help is now wrapped to the terminal width &lt;a href=&quot;https://github.com/docker/docker/pull/28751&quot;&gt;#28751&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Suppress image digest in docker ps &lt;a href=&quot;https://github.com/docker/docker/pull/30848&quot;&gt;#30848&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hide command options that are related to Windows &lt;a href=&quot;https://github.com/docker/docker/pull/30788&quot;&gt;#30788&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker plugin install&lt;/code&gt; prompt to accept &quot;enter&quot; for the &quot;N&quot; default &lt;a href=&quot;https://github.com/docker/docker/pull/30769&quot;&gt;#30769&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;truncate&lt;/code&gt; function for Go templates &lt;a href=&quot;https://github.com/docker/docker/pull/30484&quot;&gt;#30484&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Support expanded syntax of ports in &lt;code&gt;stack deploy&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30476&quot;&gt;#30476&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support expanded syntax of mounts in &lt;code&gt;stack deploy&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30597&quot;&gt;#30597&lt;/a&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31795&quot;&gt;#31795&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--add-host&lt;/code&gt; for docker build &lt;a href=&quot;https://github.com/docker/docker/pull/30383&quot;&gt;#30383&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;.CreatedAt&lt;/code&gt; placeholder for &lt;code&gt;docker network ls --format&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29900&quot;&gt;#29900&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Update order of &lt;code&gt;--secret-rm&lt;/code&gt; and &lt;code&gt;--secret-add&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29802&quot;&gt;#29802&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--filter enabled=true&lt;/code&gt; for &lt;code&gt;docker plugin ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/28627&quot;&gt;#28627&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--format&lt;/code&gt; to &lt;code&gt;docker service ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/28199&quot;&gt;#28199&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;publish&lt;/code&gt; and &lt;code&gt;expose&lt;/code&gt; filter for &lt;code&gt;docker ps --filter&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/27557&quot;&gt;#27557&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Support multiple service IDs on &lt;code&gt;docker service ps&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/25234&quot;&gt;#25234&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow swarm join with &lt;code&gt;--availability=drain&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/24993&quot;&gt;#24993&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker inspect now shows &quot;docker-default&quot; when AppArmor is enabled and no other profile was defined &lt;a href=&quot;https://github.com/docker/docker/pull/27083&quot;&gt;#27083&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Logging&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement optional ring buffer for container logs &lt;a href=&quot;https://github.com/docker/docker/pull/28762&quot;&gt;#28762&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--log-opt awslogs-create-group=&amp;lt;true|false&amp;gt;&lt;/code&gt; for awslogs (CloudWatch) to support creation of log groups as needed &lt;a href=&quot;https://github.com/docker/docker/pull/29504&quot;&gt;#29504&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix segfault when using the gcplogs logging driver with a &quot;static&quot; binary &lt;a href=&quot;https://github.com/docker/docker/pull/29478&quot;&gt;#29478&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Networking&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Check parameter &lt;code&gt;--ip&lt;/code&gt;, &lt;code&gt;--ip6&lt;/code&gt; and &lt;code&gt;--link-local-ip&lt;/code&gt; in &lt;code&gt;docker network connect&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30807&quot;&gt;#30807&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Added support for &lt;code&gt;dns-search&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30117&quot;&gt;#30117&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Added --verbose option for docker network inspect to show task details from all swarm nodes &lt;a href=&quot;https://github.com/docker/docker/pull/31710&quot;&gt;#31710&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Clear stale datapath encryption states when joining the cluster &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1354&quot;&gt;docker/libnetwork#1354&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure iptables initialization only happens once &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1676&quot;&gt;docker/libnetwork#1676&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix bad order of iptables filter rules &lt;a href=&quot;https://github.com/docker/libnetwork/pull/961&quot;&gt;docker/libnetwork#961&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add anonymous container alias to service record on attachable network &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1651&quot;&gt;docker/libnetwork#1651&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support for &lt;code&gt;com.docker.network.container_interface_prefix&lt;/code&gt; driver label &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1667&quot;&gt;docker/libnetwork#1667&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve network list performance by omitting network details that are not used &lt;a href=&quot;https://github.com/docker/docker/pull/30673&quot;&gt;#30673&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Runtime&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Handle paused container when restoring without live-restore set &lt;a href=&quot;https://github.com/docker/docker/pull/31704&quot;&gt;#31704&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not allow sub second in healthcheck options in Dockerfile &lt;a href=&quot;https://github.com/docker/docker/pull/31177&quot;&gt;#31177&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Support name and id prefix in  &lt;code&gt;secret update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30856&quot;&gt;#30856&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use binary frame for websocket attach endpoint &lt;a href=&quot;https://github.com/docker/docker/pull/30460&quot;&gt;#30460&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix linux mount calls not applying propagation type changes &lt;a href=&quot;https://github.com/docker/docker/pull/30416&quot;&gt;#30416&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix ExecIds leak on failed &lt;code&gt;exec -i&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30340&quot;&gt;#30340&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prune named but untagged images if &lt;code&gt;danglingOnly=true&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30330&quot;&gt;#30330&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add daemon flag to set &lt;code&gt;no_new_priv&lt;/code&gt; as default for unprivileged containers &lt;a href=&quot;https://github.com/docker/docker/pull/29984&quot;&gt;#29984&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add daemon option &lt;code&gt;--default-shm-size&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29692&quot;&gt;#29692&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support registry mirror config reload &lt;a href=&quot;https://github.com/docker/docker/pull/29650&quot;&gt;#29650&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Ignore the daemon log config when building images &lt;a href=&quot;https://github.com/docker/docker/pull/29552&quot;&gt;#29552&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Move secret name or ID prefix resolving from client to daemon &lt;a href=&quot;https://github.com/docker/docker/pull/29218&quot;&gt;#29218&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow adding rules to &lt;code&gt;cgroup devices.allow&lt;/code&gt; on container create/run &lt;a href=&quot;https://github.com/docker/docker/pull/22563&quot;&gt;#22563&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix &lt;code&gt;cpu.cfs_quota_us&lt;/code&gt; being reset when running &lt;code&gt;systemd daemon-reload&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31736&quot;&gt;#31736&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Swarm Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Topology-aware scheduling &lt;a href=&quot;https://github.com/docker/docker/pull/30725&quot;&gt;#30725&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Automatic service rollback on failure &lt;a href=&quot;https://github.com/docker/docker/pull/31108&quot;&gt;#31108&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Worker and manager on the same node are now connected through a UNIX socket &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1828&quot;&gt;docker/swarmkit#1828&lt;/a&gt;, &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1850&quot;&gt;docker/swarmkit#1850&lt;/a&gt;, &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1851&quot;&gt;docker/swarmkit#1851&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Improve raft transport package &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1748&quot;&gt;docker/swarmkit#1748&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;No automatic manager shutdown on demotion/removal &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1829&quot;&gt;docker/swarmkit#1829&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use TransferLeadership to make leader demotion safer &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1939&quot;&gt;docker/swarmkit#1939&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Decrease default monitoring period &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1967&quot;&gt;docker/swarmkit#1967&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Service logs formatting &lt;a href=&quot;https://github.com/docker/docker/pull/31672&quot;&gt;#31672&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix service logs API to be able to specify stream &lt;a href=&quot;https://github.com/docker/docker/pull/31313&quot;&gt;#31313&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--stop-signal&lt;/code&gt; for &lt;code&gt;service create&lt;/code&gt; and &lt;code&gt;service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30754&quot;&gt;#30754&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--read-only&lt;/code&gt; for &lt;code&gt;service create&lt;/code&gt; and &lt;code&gt;service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30162&quot;&gt;#30162&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Renew the context after communicating with the registry &lt;a href=&quot;https://github.com/docker/docker/pull/31586&quot;&gt;#31586&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(experimental) Add &lt;code&gt;--tail&lt;/code&gt; and &lt;code&gt;--since&lt;/code&gt; options to &lt;code&gt;docker service logs&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31500&quot;&gt;#31500&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(experimental) Add &lt;code&gt;--no-task-ids&lt;/code&gt; and &lt;code&gt;--no-trunc&lt;/code&gt; options to &lt;code&gt;docker service logs&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31672&quot;&gt;#31672&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Windows&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Block pulling Windows images on non-Windows daemons &lt;a href=&quot;https://github.com/docker/docker/pull/29001&quot;&gt;#29001&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Downloads&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;deb/rpm install&lt;/strong&gt;: &lt;code&gt;curl -fsSL https://test.docker.com/ | sh&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Linux 64bits tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Linux/x86_64/docker-17.04.0-ce-rc2.tgz&quot;&gt;https://test.docker.com/builds/Linux/x86_64/docker-17.04.0-ce-rc2.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Darwin/OSX 64bits client tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Darwin/x86_64/docker-17.04.0-ce-rc2.tgz&quot;&gt;https://test.docker.com/builds/Darwin/x86_64/docker-17.04.0-ce-rc2.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Linux 32bits arm tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Linux/armel/docker-17.04.0-ce-rc2.tgz&quot;&gt;https://test.docker.com/builds/Linux/armel/docker-17.04.0-ce-rc2.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 64bits zip&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Windows/x86_64/docker-17.04.0-ce-rc2.zip&quot;&gt;https://test.docker.com/builds/Windows/x86_64/docker-17.04.0-ce-rc2.zip&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 32bits client zip&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Windows/i386/docker-17.04.0-ce-rc2.zip&quot;&gt;https://test.docker.com/builds/Windows/i386/docker-17.04.0-ce-rc2.zip&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+    <author>
+      <name>vieux</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1032519?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/7691631/v17.03.1-ce</id>
+    <updated>2017-04-01T16:14:44+03:00</updated>
+    <link rel="alternate" type="text/html" href="/moby/moby/releases/tag/v17.03.1-ce"/>
+    <title>v17.03.1-ce</title>
+    <content type="html">&lt;h1&gt;Changelog&lt;/h1&gt;
+&lt;p&gt;Items starting with &lt;code&gt;DEPRECATE&lt;/code&gt; are important deprecation notices. For more&lt;br&gt;
+information on the list of deprecated flags and APIs please have a look at&lt;br&gt;
+&lt;a href=&quot;https://docs.docker.com/engine/deprecated/&quot;&gt;https://docs.docker.com/engine/deprecated/&lt;/a&gt; where target removal dates can also&lt;br&gt;
+be found.&lt;/p&gt;
+&lt;h2&gt;17.03.1-ce (2017-03-27)&lt;/h2&gt;
+&lt;h3&gt;Remote API (v1.27) &amp;amp; Client&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix autoremove on older api &lt;a href=&quot;https://github.com/docker/docker/pull/31692&quot;&gt;#31692&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix default network customization for a stack &lt;a href=&quot;https://github.com/docker/docker/pull/31258/&quot;&gt;#31258&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Correct CPU usage calculation in presence of offline CPUs and newer Linux &lt;a href=&quot;https://github.com/docker/docker/pull/31802&quot;&gt;#31802&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix issue where service healthcheck is &lt;code&gt;{}&lt;/code&gt; in remote API &lt;a href=&quot;https://github.com/docker/docker/pull/30197&quot;&gt;#30197&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Runtime&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update runc to 54296cf40ad8143b62dbcaa1d90e520a2136ddfe &lt;a href=&quot;https://github.com/docker/docker/pull/31666&quot;&gt;#31666&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ignore cgroup2 mountpoints &lt;a href=&quot;https://github.com/opencontainers/runc/pull/1266&quot;&gt;opencontainers/runc#1266&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update containerd to 4ab9917febca54791c5f071a9d1f404867857fcc &lt;a href=&quot;https://github.com/docker/docker/pull/31662&quot;&gt;#31662&lt;/a&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31852&quot;&gt;#31852&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Register healtcheck service before calling restore() &lt;a href=&quot;https://github.com/docker/containerd/pull/609&quot;&gt;docker/containerd#609&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker exec&lt;/code&gt; not working after unattended upgrades that reload apparmor profiles &lt;a href=&quot;https://github.com/docker/docker/pull/31773&quot;&gt;#31773&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix unmounting layer without merge dir with Overlay2 &lt;a href=&quot;https://github.com/docker/docker/pull/31069&quot;&gt;#31069&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Do not ignore &quot;volume in use&quot; errors when force-delete &lt;a href=&quot;https://github.com/docker/docker/pull/31450&quot;&gt;#31450&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Swarm Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update swarmkit to 17756457ad6dc4d8a639a1f0b7a85d1b65a617bb &lt;a href=&quot;https://github.com/docker/docker/pull/31807&quot;&gt;#31807&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Scheduler now correctly considers tasks which have been assigned to a node but aren&#39;t yet running &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1980&quot;&gt;docker/swarmkit#1980&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Allow removal of a network when only dead tasks reference it &lt;a href=&quot;https://github.com/docker/swarmkit/pull/2018&quot;&gt;docker/swarmkit#2018&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Retry failed network allocations less aggressively &lt;a href=&quot;https://github.com/docker/swarmkit/pull/2021&quot;&gt;docker/swarmkit#2021&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Avoid network allocation for tasks that are no longer running &lt;a href=&quot;https://github.com/docker/swarmkit/pull/2017&quot;&gt;docker/swarmkit#2017&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bookkeeping fixes inside network allocator allocator &lt;a href=&quot;https://github.com/docker/swarmkit/pull/2019&quot;&gt;docker/swarmkit#2019&lt;/a&gt; &lt;a href=&quot;https://github.com/docker/swarmkit/pull/2020&quot;&gt;docker/swarmkit#2020&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Windows&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleanup HCS on restore &lt;a href=&quot;https://github.com/docker/docker/pull/31503&quot;&gt;#31503&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Downloads&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;deb/rpm install&lt;/strong&gt;: &lt;code&gt;curl -fsSL https://get.docker.com/ | sh&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Linux 64bits tgz&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Linux/x86_64/docker-17.03.1-ce.tgz&quot;&gt;https://get.docker.com/builds/Linux/x86_64/docker-17.03.1-ce.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Darwin/OSX 64bits client tgz&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Darwin/x86_64/docker-17.03.1-ce.tgz&quot;&gt;https://get.docker.com/builds/Darwin/x86_64/docker-17.03.1-ce.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Linux 32bits arm tgz&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Linux/armel/docker-17.03.1-ce.tgz&quot;&gt;https://get.docker.com/builds/Linux/armel/docker-17.03.1-ce.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 64bits zip&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Windows/x86_64/docker-17.03.1-ce.zip&quot;&gt;https://get.docker.com/builds/Windows/x86_64/docker-17.03.1-ce.zip&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 32bits client zip&lt;/strong&gt;: &lt;a href=&quot;https://get.docker.com/builds/Windows/i386/docker-17.03.1-ce.zip&quot;&gt;https://get.docker.com/builds/Windows/i386/docker-17.03.1-ce.zip&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+    <author>
+      <name>vieux</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1032519?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/7691631/v17.04.0-ce-rc1</id>
+    <updated>2017-03-27T16:20:52+03:00</updated>
+    <link rel="alternate" type="text/html" href="/moby/moby/releases/tag/v17.04.0-ce-rc1"/>
+    <title>v17.04.0-ce-rc1</title>
+    <content type="html">&lt;h2&gt;17.04.0-ce (2017-04-05)&lt;/h2&gt;
+&lt;h3&gt;Client&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Sort &lt;code&gt;docker stack ls&lt;/code&gt; by name &lt;a href=&quot;https://github.com/docker/docker/pull/31085&quot;&gt;#31085&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Flags for specifying bind mount consistency &lt;a href=&quot;https://github.com/docker/docker/pull/31047&quot;&gt;#31047&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Suppressing image digest in docker ps &lt;a href=&quot;https://github.com/docker/docker/pull/30848&quot;&gt;#30848&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hide command options that are related to Windows &lt;a href=&quot;https://github.com/docker/docker/pull/30788&quot;&gt;#30788&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;docker plugin install&lt;/code&gt; prompt to accept &quot;enter&quot; for the &quot;N&quot; default &lt;a href=&quot;https://github.com/docker/docker/pull/30769&quot;&gt;#30769&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;truncate&lt;/code&gt; function for Go templates &lt;a href=&quot;https://github.com/docker/docker/pull/30484&quot;&gt;#30484&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Support expanded syntax of ports in &lt;code&gt;stack deploy&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30476&quot;&gt;#30476&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support expanded syntax of mounts in &lt;code&gt;stack deploy&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30597&quot;&gt;#30597&lt;/a&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/31795&quot;&gt;#31795&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--add-host&lt;/code&gt; for docker build &lt;a href=&quot;https://github.com/docker/docker/pull/30383&quot;&gt;#30383&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;.CreatedAt&lt;/code&gt; placeholder for &lt;code&gt;docker network ls --format&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29900&quot;&gt;#29900&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Update order of &lt;code&gt;--secret-rm&lt;/code&gt; and &lt;code&gt;--secret-add&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29802&quot;&gt;#29802&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix use of &lt;code&gt;**/&lt;/code&gt; in &lt;code&gt;.dockerignore&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29043&quot;&gt;#29043&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--filter enabled=true&lt;/code&gt; for &lt;code&gt;docker plugin ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/28627&quot;&gt;#28627&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--format&lt;/code&gt; to &lt;code&gt;docker service ls&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/28199&quot;&gt;#28199&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;publish&lt;/code&gt; and &lt;code&gt;expose&lt;/code&gt; filter for &lt;code&gt;docker ps --filter&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/27557&quot;&gt;#27557&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Support multiple service IDs on &lt;code&gt;docker service ps&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/25234&quot;&gt;#25234&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow swarm join with &lt;code&gt;--availability=drain&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/24993&quot;&gt;#24993&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Networking&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Check parameter &lt;code&gt;--ip&lt;/code&gt;, &lt;code&gt;--ip6&lt;/code&gt; and &lt;code&gt;--link-local-ip&lt;/code&gt; in &lt;code&gt;docker network connect&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30807&quot;&gt;#30807&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Added support for &lt;code&gt;dns-search&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30117&quot;&gt;#30117&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Added --verbose option for docker network inspect to show task details from all swarm nodes &lt;a href=&quot;https://github.com/docker/docker/pull/31710&quot;&gt;#31710&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Clear stale datapath encryption states when joining the cluster &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1354&quot;&gt;docker/libnetwork#1354&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure iptables initialization only happens once &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1676&quot;&gt;docker/libnetwork#1676&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix bad order of iptables filter rules &lt;a href=&quot;https://github.com/docker/libnetwork/pull/961&quot;&gt;docker/libnetwork#961&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add anonymous container alias to service record on attachable network &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1651&quot;&gt;docker/libnetwork#1651&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support for &lt;code&gt;com.docker.network.container_interface_prefix&lt;/code&gt; driver label &lt;a href=&quot;https://github.com/docker/libnetwork/pull/1667&quot;&gt;docker/libnetwork#1667&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Runtime&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Handle paused container when restoring without live-restore set &lt;a href=&quot;https://github.com/docker/docker/pull/31704&quot;&gt;#31704&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not allow sub second in healthcheck options in Dockerfile &lt;a href=&quot;https://github.com/docker/docker/pull/31177&quot;&gt;#31177&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Support name and id prefix in  &lt;code&gt;secret update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30856&quot;&gt;#30856&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use binary frame for websocket attach endpoint &lt;a href=&quot;https://github.com/docker/docker/pull/30460&quot;&gt;#30460&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix linux mount calls not applying propagation type changes &lt;a href=&quot;https://github.com/docker/docker/pull/30416&quot;&gt;#30416&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix ExecIds leak on failed &lt;code&gt;exec -i&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30340&quot;&gt;#30340&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prune named but untagged images if &lt;code&gt;danglingOnly=true&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30330&quot;&gt;#30330&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add daemon flag to set &lt;code&gt;no_new_priv&lt;/code&gt; as default for unprivileged containers &lt;a href=&quot;https://github.com/docker/docker/pull/29984&quot;&gt;#29984&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add daemon option &lt;code&gt;--default-shm-size&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/29692&quot;&gt;#29692&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support registry mirror config reload &lt;a href=&quot;https://github.com/docker/docker/pull/29650&quot;&gt;#29650&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Ignore the daemon log config when building images &lt;a href=&quot;https://github.com/docker/docker/pull/29552&quot;&gt;#29552&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Move secret name or ID prefix resolving from client to daemon &lt;a href=&quot;https://github.com/docker/docker/pull/29218&quot;&gt;#29218&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement optional ring buffer for container logs &lt;a href=&quot;https://github.com/docker/docker/pull/28762&quot;&gt;#28762&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Allow adding rules to &lt;code&gt;cgroup devices.allow&lt;/code&gt; on container create/run &lt;a href=&quot;https://github.com/docker/docker/pull/22563&quot;&gt;#22563&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Swarm Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Topology-aware scheduling &lt;a href=&quot;https://github.com/docker/docker/pull/30725&quot;&gt;#30725&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Automatic service rollback on failure &lt;a href=&quot;https://github.com/docker/docker/pull/31108&quot;&gt;#31108&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Worker and manager on the same node are now connected through a UNIX socket &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1828&quot;&gt;docker/swarmkit#1828&lt;/a&gt;, &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1850&quot;&gt;docker/swarmkit#1850&lt;/a&gt;, &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1851&quot;&gt;docker/swarmkit#1851&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Improve raft transport package &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1748&quot;&gt;docker/swarmkit#1748&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;No automatic manager shutdown on demotion/removal &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1829&quot;&gt;docker/swarmkit#1829&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use TransferLeadership to make leader demotion safer &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1939&quot;&gt;docker/swarmkit#1939&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Decrease default monitoring period &lt;a href=&quot;https://github.com/docker/swarmkit/pull/1967&quot;&gt;docker/swarmkit#1967&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Service logs formatting &lt;a href=&quot;https://github.com/docker/docker/pull/31672&quot;&gt;#31672&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix service logs API to be able to specify stream &lt;a href=&quot;https://github.com/docker/docker/pull/31313&quot;&gt;#31313&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;code&gt;--stop-signal&lt;/code&gt; for &lt;code&gt;service create&lt;/code&gt; and &lt;code&gt;service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30754&quot;&gt;#30754&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;--read-only&lt;/code&gt; for &lt;code&gt;service create&lt;/code&gt; and &lt;code&gt;service update&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/docker/pull/30162&quot;&gt;#30162&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Renew the context after communicating with the registry &lt;a href=&quot;https://github.com/docker/docker/pull/31586&quot;&gt;#31586&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Windows&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Wait for OOBE to prevent crashing during host update &lt;a href=&quot;https://github.com/docker/docker/pull/31054&quot;&gt;#31054&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Block pulling Windows images on non-Windows daemons &lt;a href=&quot;https://github.com/docker/docker/pull/29001&quot;&gt;#29001&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Downloads&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;deb/rpm install&lt;/strong&gt;: &lt;code&gt;curl -fsSL https://test.docker.com/ | sh&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Linux 64bits tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Linux/x86_64/docker-17.04.0-ce-rc1.tgz&quot;&gt;https://test.docker.com/builds/Linux/x86_64/docker-17.04.0-ce-rc1.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Darwin/OSX 64bits client tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Darwin/x86_64/docker-17.04.0-ce-rc1.tgz&quot;&gt;https://test.docker.com/builds/Darwin/x86_64/docker-17.04.0-ce-rc1.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Linux 32bits arm tgz&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Linux/armel/docker-17.04.0-ce-rc1.tgz&quot;&gt;https://test.docker.com/builds/Linux/armel/docker-17.04.0-ce-rc1.tgz&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 64bits zip&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Windows/x86_64/docker-17.04.0-ce-rc1.zip&quot;&gt;https://test.docker.com/builds/Windows/x86_64/docker-17.04.0-ce-rc1.zip&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Windows 32bits client zip&lt;/strong&gt;: &lt;a href=&quot;https://test.docker.com/builds/Windows/i386/docker-17.04.0-ce-rc1.zip&quot;&gt;https://test.docker.com/builds/Windows/i386/docker-17.04.0-ce-rc1.zip&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+    <author>
+      <name>vieux</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1032519?s=60&amp;v=4"/>
+  </entry>
+</feed>
